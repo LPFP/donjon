@@ -1,0 +1,49 @@
+.jumbotron{
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+.center{
+	text-align: center;
+	/*display: inline-block;*/
+}
+#body{
+	margin-top: 200px;
+	margin-bottom: 100px;
+}
+#header{
+	display: block;
+}
+#twitter{
+	width: 400px;
+}
+#logo{
+	padding-left: 70px;
+}
+.center iframe#keys{
+	width: 550px;
+	height: 180px;
+}
+.center iframe#keysForm{
+	width: 600px;
+	height: 810px;
+}
+.center iframe#shiftsAnalyze{
+	width: 600px;
+	height: 810px;
+}
+.center iframe#fabmanagersIframe{
+	width: 1400px;
+	height: 530px;
+}
+.center iframe#newFabmanagersIframe{
+	width: 1180px;
+	height: 220px;
+}
+.center iframe#membersIframe{
+	width: 1150px;
+	height: 450px;
+}
+.center iframe#newMembers{
+	width: 600px;
+	height: 800px;
+}
