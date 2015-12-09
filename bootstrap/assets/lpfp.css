@@ -12,12 +12,12 @@
 #logo{
     padding-left: 70px;
 }
-
 iframe{
     width:100%;
 }
-.center iframe#keys{
+#keys iframe{
     height: 180px;
+    width:550px
 }
 .center iframe#keysForm{
     height: 810px;
