@@ -13,11 +13,10 @@ require_once 'includes/conf.php';
     <body>
         <?php
         require_once 'includes/header.php';
+        require_once 'includes/menu.php';
         ?>
         <div class="container">
-            <?php
-            require_once 'includes/menu.php';
-            ?>
+
             <div id="body">
                 <div class="container-fluid">
                     <section id="welcome" class="" >

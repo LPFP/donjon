@@ -14,12 +14,11 @@ require_once 'includes/conf.php';
 
         <?php
         require_once 'includes/header.php';
+        require_once 'includes/menu.php';
         ?>
-        <!-- Grid System begin -->
+
         <div class="container">
-            <?php
-            require_once 'includes/menu.php';
-            ?>
+
 
             <!-- CONTENT : TABS -->
             <div id="body">
@@ -32,7 +31,7 @@ require_once 'includes/conf.php';
                         </div>
                     </div>
                     <div class=" row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12" >
                             <iframe id="fabmanagersIframe" src="https://docs.google.com/spreadsheets/d/1j35WKcaX07aLgdpL5c1FNfGsKHAQNS-RxVo3-PHzfTg/edit#gid=899986583&amp;single=true&amp;widget=true&amp;headers=false">
                             Loading...	
                             </iframe>

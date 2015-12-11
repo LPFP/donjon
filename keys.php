@@ -11,18 +11,11 @@ require_once 'includes/conf.php';
     </head>
 
     <body>
-
         <?php
         require_once 'includes/header.php';
+        require_once 'includes/menu.php';
         ?>
-
-        <!-- Grid System begin -->
         <div class="container">
-            <?php
-            require_once 'includes/menu.php';
-            ?>
-
-            <!-- CONTENT : TABS -->
             <div id="body">
                 <div class="container-fluid">
 
