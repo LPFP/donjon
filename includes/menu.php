@@ -27,7 +27,7 @@
                 foreach ($menu as $pageName => $title) :
                     if (CURRENT_PAGE_NAME == $pageName) :
                         $class = 'active';
-                        $pageTItle = $title;
+                        $pageTitle = $title;
                     else :
                         $class = '';
                     endif;

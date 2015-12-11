@@ -14,8 +14,6 @@ require_once 'includes/conf.php';
         <?php
         require_once 'includes/header.php';
         ?>
-
-        <!-- Grid System begin -->
         <div class="container">
             <?php
             require_once 'includes/menu.php';
@@ -24,7 +22,7 @@ require_once 'includes/conf.php';
                 <div class="container-fluid">
                     <div class=" row">
                         <div class="col-lg-12">
-                            <h1><?php echo $pageTItle ?></h1>
+                            <h1><?php echo $pageTitle ?></h1>
                             <hr/>
                         </div>
                     </div>
@@ -48,9 +46,8 @@ require_once 'includes/conf.php';
                         </div>
                     </div>
                 </div>
-            </div> <!-- /#body -->
-        </div><!-- /.container -->
-
+            </div> 
+        </div>
         <?php
         require_once 'includes/footer.php';
         ?>

@@ -15,25 +15,22 @@ require_once 'includes/conf.php';
         <?php
         require_once 'includes/header.php';
         ?>
-        <!-- Grid System begin -->
         <div class="container">
             <?php
             require_once 'includes/menu.php';
             ?>
-            <!-- CONTENT : TABS -->
             <div id="body">
                 <div class="container-fluid">
 
                     <div class=" row">
                         <div class="col-lg-12">
-                            <h1><?php echo $pageTItle ?></h1>
+                            <h1><?php echo $pageTitle ?></h1>
                             <hr/>
                         </div>
                     </div>
                     <div class=" row">
                         <div class="col-lg-12">
                             <div id="members" class=" center">
-                                <!-- code génerer par googleDoc depuis le menu Fichier > Publier -->
                                 <iframe id="membersIframe" src="https://docs.google.com/spreadsheets/d/1kFnn_0aTNAWlGuEw6T98adrcjdIS4W-YopM8an3_5yc/pubhtml?gid=1680566637&amp;single=true&amp;widget=true&amp;headers=false">
                                 Loading...
                                 </iframe>
@@ -50,7 +47,6 @@ require_once 'includes/conf.php';
                                 <div class="collapse" id="newMembers">
                                     <div class="well">
                                         <section>
-                                            <!-- code génerer par googleDoc depuis le menu Fichier > Publier -->
                                             <h2>ICI IL Y AURA UN IFRAME POUR VOIR LES NOUVELLES ADHESIONS DIRECTEMENT DEPUIS LES RESULTATS DU FORMULAIRE D'ADHESION</h2>
                                         </section>
                                         <a href=""
@@ -65,16 +61,15 @@ require_once 'includes/conf.php';
                                             Fermer le Document
                                         </button>
                                     </div>
-                                </div> <!-- /#newMembers -->
-                            </div> <!-- /#members -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> <!-- /#body -->
-    </div><!-- /.container -->
-    <?php
-    require_once 'includes/footer.php';
-    ?>
-</body>
+        </div>
+        <?php
+        require_once 'includes/footer.php';
+        ?>
+    </body>
 </html>

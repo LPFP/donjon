@@ -27,7 +27,7 @@ require_once 'includes/conf.php';
 
                     <div class=" row">
                         <div class="col-lg-12">
-                            <h1><?php echo $pageTItle ?></h1>
+                            <h1><?php echo $pageTitle ?></h1>
                             <hr/>
                         </div>
                     </div>
