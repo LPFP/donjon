@@ -1,40 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <meta name="description" content="Gestion du LPFP">
-        <meta name="author" content="LPFP">
-        <link rel="icon" href="bootstrap/assets/favicon.png">
-
-        <title> Accueil - Donjon - Outil de centralisation pour l'organisation des fabmanager du LPFP</title>
-
-        <!-- Bootstrap 3.3.5 core css -->
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <!-- From CDN for testing purpose -->
-        <!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/flatly/bootstrap.css" rel="stylesheet"> -->
-
-        <!-- Custom styles for this template -->
-        <!-- <link href="starter-template.css" rel="stylesheet"> -->
-
-        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif] -->
-
-        <!-- bootstrap should be include with sass precompiler and one file style.css only added here--> 
-        <script src="bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
-
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]
-        -->
-        <link href="bootstrap/assets/lpfp.css" rel="stylesheet" /> 
-    </head>
-
-
+    <?php
+    require_once 'includes/menu.php';
+    ?>
     <body>
         <!-- 1ere partie du code fournit par facebook permettant l'intégration de FB dans la page -->
         <div id="fb-root"></div>
@@ -144,7 +112,7 @@
                     <div class="tab-content">
 
                         <!-- TAB WELCOME -->
-                        <section id="welcome" class="tab-pane active" role="tabpanel">
+                        <section id="welcome" class=" active" role="tabpanel">
                             <!-- This could be replaced by header tag --> 
                             <div class=" row">
                                 <div class="col-lg-12">
@@ -198,7 +166,7 @@
 
 
                         <!-- TAB KEYS -->
-                        <section id="keys" class="tab-pane center" role="tabpanel">
+                        <section id="keys" class=" center" role="tabpanel">
                             <h2>Qui a les clefs ?</h2>
                             <a href="https://docs.google.com/spreadsheets/d/1ahKXqBw5CIEFOe6QnuwEqHRp5r3sg5iSZ3MSGej7X8o/edit#gid=888024120" target="_blank">
                                 Historique
@@ -234,7 +202,7 @@
 
 
                         <!-- TAB FABMANAGERS -->
-                        <div id="fabManagers" class="tab-pane center" role="tabpanel">
+                        <div id="fabManagers" class=" center" role="tabpanel">
                             <h2>Calendrier des Permanences</h2>
 
                             <!-- code génerer par googleDoc depuis le menu Fichier > Publier -->
@@ -278,7 +246,7 @@
                         </div> <!-- fabManagers -->
 
 
-                        <div id="shifts" class="tab-pane center" role="tabpanel">
+                        <div id="shifts" class=" center" role="tabpanel">
                             <a href="https://docs.google.com/spreadsheets/d/1eXdFVutyxASkwqwiBINr_LBaBOtxQ4Wl3scYCV4i8b8/view#gid=1661249124" target="_blank">
                                 Historique
                             </a>
@@ -295,7 +263,7 @@
 
 
 
-                        <div id="members" class="tab-pane center" role="tabpanel">
+                        <div id="members" class=" center" role="tabpanel">
                             <!-- code génerer par googleDoc depuis le menu Fichier > Publier -->
                             <iframe id="membersIframe" src="https://docs.google.com/spreadsheets/d/1kFnn_0aTNAWlGuEw6T98adrcjdIS4W-YopM8an3_5yc/pubhtml?gid=1680566637&amp;single=true&amp;widget=true&amp;headers=false">
                             Loading...
@@ -363,5 +331,9 @@
         <footer>
         </footer>
 
+        <?php
+        require_once 'includes/js.php';
+        require_once 'includes/footer.php';
+        ?>
     </body>
 </html>
