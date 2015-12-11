@@ -30,7 +30,7 @@ require_once 'includes/conf.php';
                         <!-- This could be replaced by header tag --> 
                         <div class=" row">
                             <div class="col-lg-12">
-                                <h1>Les flux d'infos</h1>
+                                <h1><?php echo $pageTItle ?></h1>
                                 <hr/>
                             </div>
                         </div>

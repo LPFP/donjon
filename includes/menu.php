@@ -25,7 +25,12 @@
                 -->
                 <?php
                 foreach ($menu as $pageName => $title) :
-                    $class = (CURRENT_PAGE_NAME == $pageName) ? 'active' : '';
+                    if (CURRENT_PAGE_NAME == $pageName) :
+                        $class = 'active';
+                        $pageTItle = $title;
+                    else :
+                        $class = '';
+                    endif;
                     ?>
                     <li id="welcomeButton" class="<?php echo $class; ?>">
                         <a href="./<?php echo $pageName; ?>.php"><?php echo $title; ?></a>

@@ -4,7 +4,7 @@ $menu = [
     'index' => 'Accueil',
     'keys' => 'Clefs',
     'fabmanagers' => 'FabManagers',
-    'scheduling' => 'Permanences',
+    'perms' => 'CR Permanences',
     'members' => 'Membres',
 ];
 
