@@ -1,0 +1,51 @@
+.center{
+    text-align: center;
+}
+#body{
+    margin-bottom: 100px;
+}
+#header{
+    display: block;
+}
+#twitter{
+}
+#logo{
+    padding-left: 70px;
+}
+iframe{
+    width:100%;
+}
+#keys iframe{
+    height: 180px;
+    width:550px
+}
+iframe{
+    width:100%;
+}
+
+.center iframe#keysForm{
+    height: 810px;
+}
+.center iframe#shiftsAnalyze{
+    height: 810px;
+}
+#fabmanagersIframe{
+    height: 530px;
+}
+.center iframe#newFabmanagersIframe{
+    height: 220px;
+}
+.center iframe#membersIframe{
+    height: 450px;
+}
+.center iframe#newMembers{
+    height: 800px;
+}
+/* Sticky Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
