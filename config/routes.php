@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Routes configuration
  *
@@ -17,7 +18,6 @@
  * @link          http://cakephp.org CakePHP(tm) Project
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 use Cake\Core\Plugin;
 use Cake\Routing\Router;
 
@@ -47,7 +47,7 @@ Router::scope('/', function ($routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'homepage']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
