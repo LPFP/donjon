@@ -1,0 +1,23 @@
+{
+    "name": "extrablind/Keys",
+    "description": "Create keys and manage who is using and borrow it.",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.4.16",
+        "cakephp/cakephp": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Keys\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Keys\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}

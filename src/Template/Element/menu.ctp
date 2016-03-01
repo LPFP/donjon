@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/pages/homepage">Donjon</a>
+            <a class="navbar-brand" href="/">Donjon</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -23,64 +23,130 @@
                </li>
                 -->
                 <?php
+                /*
                 if (!empty($menu)) :
                     foreach ($menu as $pageName => $title) :
                         $class = '';
                         $thisPageIsCurrentViewedPage = strpos($currentPageName, $pageName) >= 1;
                         if ($thisPageIsCurrentViewedPage) :
                             $class = 'active';
-
                             $this->set('pageTitle', $title);
                         endif;
                         ?>
                         <li id="welcomeButton" class="<?php echo $class; ?>">
-                            <a href="/pages/<?php echo $pageName; ?>/"><?php echo $title; ?></a>
+                            <?php echo $this->Html->link($title, ['controller' => 'pages', 'action' => 'display', $pageName]); ?>
                         </li>
                         <?php
                     endforeach;
                 endif;
+                */
                 ?>
 
+
+
+                                                         <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <?php echo __("Manage") ?><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+            <li id="welcomeButton" class="<?php echo ""; ?>">
+                            <?php echo $this->Html->link(__("Scheduling"), ['controller' => 'pages', 'action' => 'display', 'scheduling'   ]); ?>
+                        </li>
+
+                                                              <li id="">
+                            <?php
+                            echo $this->Html->link(__("Accounts"), ['controller' => 'accounts', 'action' => 'index' ]);
+                            ?>
+                        </li>
+                                                                         
+                        <li id="">
+                            <?php
+                            echo $this->Html->link(__("Key borrow"), ['controller' => 'KeyBorrows', 'action' => 'index' ]);
+                            ?>
+                        </li>
+                                                <li class="divider"></li>
+                        <li id="openingsButton">
+                            <?php
+                            echo $this->Html->link(__("Open door report"), ['controller' => 'reports', 'action' => 'index' , 'type' => 1 ]);
+                            ?>
+                        </li>
+                    </ul>
+                </li>                                                        
+
+
+
+
+                                                         <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <?php echo __("Members") ?><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+
+      
+                                                        <li id="">
+                            <?php
+                            echo $this->Html->link(__("Regular members"), ['controller' => 'Users', 'action' => 'index' , 'type' => 1]);
+                            ?>
+                        </li>
+                                       <li id="">
+                            <?php
+                            echo $this->Html->link(__("Fabmanagers"), ['controller' => 'Users', 'action' => 'index' ,  'type' => 2]);
+                            ?>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
                 <!-- Forms -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         Formulaires<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li id="signinButton">
-                            <a href="https://docs.google.com/forms/d/1wC_Cygd2IjJCNRiZl4tEw3wuw1q4iGpOCkt5L_otFJo/viewform?gid=0" 
+
+                        <li id="">
+                            <?php
+                            echo $this->Html->link(__("New adherent form"), ['controller' => 'Forms', 'action' => 'index',  'type' => 1 ]);
+                            ?>
+                        </li>
+                         <li id="">
+                            <?php
+                            echo $this->Html->link(__("Visitor form"), ['controller' => 'Forms', 'action' => 'index',  'type' => 1 ]);
+                            ?>
+                        </li>
+                         
+
+                    </ul>
+                </li>
+                
+                
+                                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <?php echo __("External services") ?><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li id="" >
+                            <a href="http://kiwimanager.lepetitfablabdeparis.fr/" 
                                target="_blank">
-                                Nouvelle Adhésion
+                                WIKI 
                             </a>
                         </li>
-                        <li id="openingsButton">
-                            <a href="https://docs.google.com/forms/d/1cbevl9E5Jm2_a7Iqk4Fcu6aij8C6zHPYdhFRNGnrmnQ/viewform" 
+        
+                        <li id="" >
+                            <a href="https://trello.com/lpfp" 
                                target="_blank">
-                                Portes Ouvertes
+                                Trello
+                            </a>
+                        </li>
+                        <li id="" >
+                            <a href="https://lpfparis.slack.com/" 
+                               target="_blank">
+                                Slack
                             </a>
                         </li>
                     </ul>
                 </li>
 
-                <li id="wikiButton" >
-                    <a href="http://kiwimanager.lepetitfablabdeparis.fr/" 
-                       target="_blank">
-                        WIKI
-                    </a>
-                </li>
-
-                <li id="slackButton" >
-                    <a href="https://trello.com/lpfp" 
-                       target="_blank">
-                        Trello
-                    </a>
-                </li>
-                <li id="slackButton" >
-                    <a href="https://lpfparis.slack.com/" 
-                       target="_blank">
-                        Slack
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
