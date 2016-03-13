@@ -1,112 +1,145 @@
-<%
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         0.1.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
+<% 
 use Cake\Utility\Inflector;
 
 $fields = collection($fields)
-    ->filter(function($field) use ($schema) {
-        return $schema->columnType($field) !== 'binary';
-    });
+->filter(function($field) use ($schema) {
+return $schema->columnType($field) !== 'binary';
+});
 
 if (isset($modelObject) && $modelObject->behaviors()->has('Tree')) {
-    $fields = $fields->reject(function ($field) {
-        return $field === 'lft' || $field === 'rght';
-    });
+$fields = $fields->reject(function ($field) {
+return $field === 'lft' || $field === 'rght';
+});
 }
 %>
-<div class="row">
-<div class="span12">
+<?php
+$opt = [
+    'label' => false,
+];
+$this->loadHelper('Form', [
+    'templates' => 'BakeBootstrap3Crud.vertical',
+]);
+?>
 
-<div class="well well-small">
-<% if (strpos($action, 'add') === false): %>
-        <?php echo $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $<%= $singularVar %>-><%= $primaryKey[0] %>],
-                [ 'class'=> 'btn btn-sm btn-danger'],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $<%= $singularVar %>-><%= $primaryKey[0] %>)]
+<div class="row">
+    <div class="span12">
+        <div class="well well-small">
+            <% if (strpos($action, 'add') === false): %>
+            <?php
+            echo $this->Form->postLink(
+            __('Delete'),
+            ['action' => 'delete', $<%= $singularVar %>-><%= $primaryKey[0] %>],
+            ['class' => 'pull-right btn btn-sm btn-danger'],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $<%= $singularVar %>-><%= $primaryKey[0] %>)]
             )
-        ?>
-<% endif; %>
-        <?= $this->Html->link(__('List <%= $pluralHumanName %>'), ['action' => 'index'], [ 'class'=> 'btn btn-sm btn-default']) ?>
-<%
-        $done = [];
-        foreach ($associations as $type => $data) {
+            ?>
+            <% endif; %>
+            <?= $this->Html->link(__('List <%= $pluralHumanName %>'), ['action' => 'index'], ['class' => 'btn btn-sm btn-default']) ?>
+            <%
+            $done = [];
+            foreach ($associations as $type => $data) {
             foreach ($data as $alias => $details) {
-                if ($details['controller'] !== $this->name && !in_array($details['controller'], $done)) {
-%>
-        <li><?= $this->Html->link(__('List <%= $this->_pluralHumanName($alias) %>'), ['controller' => '<%= $details['controller'] %>', 'action' => 'index'], ['class'=> 'btn btn-sm btn-default']) ?></li>
-        <li><?= $this->Html->link(__('New <%= $this->_singularHumanName($alias) %>'), ['controller' => '<%= $details['controller'] %>', 'action' => 'add'], [ 'class'=> 'btn btn-sm btn-default']) ?></li>
-<%
-                    $done[] = $details['controller'];
-                }
+            if ($details['controller'] !== $this->name && !in_array($details['controller'], $done)) {
+            %>
+            <?php
+            echo
+            $this->Html->link(__('List <%= $this->_pluralHumanName($alias) %>'), [
+            'controller' => '<%= $details['controller'] %>',
+            'action' => 'index'], ['class' => 'btn btn-sm btn-default']);
+            ?>
+            <?php
+            echo
+            $this->Html->link(__('New <%= $this->_singularHumanName($alias) %>'), [
+            'controller' => '<%= $details['controller'] %>',
+            'action' => 'add'], [
+            'class' => 'btn btn-sm btn-default'
+            ])
+            ?>
+            <%
+            $done[] = $details['controller'];
             }
-        }
-%>
-</div>
-</div>
+            }
+            }
+            %>
+        </div>
+    </div>
 </div>
 
 <div class="row">
     <div class="span12">
+        <div class="<%= $pluralVar %>">
+            <?php echo $this->Form->create($<%= $singularVar %> , ['form-horizontal']) ?>
+            <fieldset>
+                <legend><?php __('<%= Inflector::humanize($action) %> <%= $singularHumanName %>') ?></legend>
+                <?php
+                <%
+                foreach ($fields as $field) :
+                    if (in_array($field, $primaryKey)) :
+                        continue;
+                    endif;
+                    #
+                    if (isset($keyFields[$field])) :
+                        $fieldData = $schema->column($field);
+                        if (!empty($fieldData['null'])) :
+                            %>
+                            echo $this->Form->label('<%= $field %>');
+                            echo $this->Form->input('<%= $field %>', array_merge($opt, ['options' => $<%= $keyFields[$field] %>, 'empty' => true]));
+                        <%
+                        else :
+                            %>
+                            echo $this->Form->label('<%= $field %>');
+                            echo $this->Form->input('<%= $field %>', array_merge($opt, ['options' => $<%= $keyFields[$field] %>]));
+                        <%
+                        endif;
+                        continue;
+                    endif;
+                    # 
+                    if (!in_array($field, ['created', 'modified', 'updated'])) :
+                        $fieldData = $schema->column($field);
+                        if (in_array($fieldData['type'], ['date', 'datetime', 'time']) && (!empty($fieldData['null']))) :
+                            %>
+                            echo $this->Form->label('<%= $field %>');
+                            echo $this->Form->input('<%= $field %>', array_merge($opt, ['empty' => true]));
+                        <%
+                        else :
+                            %>
+                            echo $this->Form->label('<%= $field %>');
+                            echo $this->Form->input('<%= $field %>', array_merge($opt, ['placeholder' => ""]));
+                        <%
+                        endif;
+                    endif;
 
-<div class="<%= $pluralVar %>">
-    <?= $this->Form->create($<%= $singularVar %>) ?>
-    <fieldset>
-        <legend><?= __('<%= Inflector::humanize($action) %> <%= $singularHumanName %>') ?></legend>
-        <?php
-<%
-        foreach ($fields as $field) {
-            if (in_array($field, $primaryKey)) {
-                continue;
-            }
-            if (isset($keyFields[$field])) {
-                $fieldData = $schema->column($field);
-                if (!empty($fieldData['null'])) {
-%>
-            echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>, 'empty' => true]);
-<%
-                } else {
-%>
-            echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>]);
-<%
-                }
-                continue;
-            }
-            if (!in_array($field, ['created', 'modified', 'updated'])) {
-                $fieldData = $schema->column($field);
-                if (in_array($fieldData['type'], ['date', 'datetime', 'time']) && (!empty($fieldData['null']))) {
-%>
-            echo $this->Form->input('<%= $field %>', ['empty' => true]);
-<%
-                } else {
-%>
-            echo $this->Form->input('<%= $field %>');
-<%
-                }
-            }
-        }
-        if (!empty($associations['BelongsToMany'])) {
-            foreach ($associations['BelongsToMany'] as $assocName => $assocData) {
-%>
+
+                endforeach;
+                #
+                if (!empty($associations['BelongsToMany'])) :
+                    foreach ($associations['BelongsToMany'] as $assocName => $assocData) :
+                        %>
             echo $this->Form->input('<%= $assocData['property'] %>._ids', ['options' => $<%= $assocData['variable'] %>]);
-<%
-            }
-        }
-%>
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+                        <%
+                    endforeach;
+                endif;
+                %>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                ?>
+            </fieldset>
+            <br/>
+            <div class="well well-small">
+<?php echo $this->Form->button(__('Submit'), ['class' => 'pull-right btn btn-success']) ?>
+                <div class="clearfix"></div>
+            </div>
+<?= $this->Form->end() ?>
+        </div>
     </div>
-    </div>
+</div>
+·

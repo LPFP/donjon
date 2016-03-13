@@ -34,7 +34,7 @@ class KeysController extends AppController
     public function view($id = null)
     {
         $key = $this->Keys->get($id, [
-            'contain' => []
+            'contain' => ['KeyBorrows']
         ]);
 
         $this->set('key', $key);

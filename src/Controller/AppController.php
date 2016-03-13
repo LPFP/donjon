@@ -29,6 +29,20 @@ use Cake\Event\Event;
  */
 class AppController extends Controller {
 
+    use \Crud\Controller\ControllerTrait;
+
+    public $components = [
+        'Crud.Crud' => [
+            'actions' => [
+                'Crud.Index',
+                'Crud.Add',
+                'Crud.Edit',
+                'Crud.View',
+                'Crud.Delete'
+            ]
+        ]
+    ];
+
     /**
      * Initialization hook method.
      *

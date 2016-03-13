@@ -7,15 +7,15 @@ use Cake\ORM\Entity;
  * User Entity.
  *
  * @property int $id
- * @property string $firstname
- * @property string $name
  * @property string $email
- * @property string $infos
- * @property \Cake\I18n\Time $became_member_date
- * @property int $type
+ * @property string $password
+ * @property int $profile_id
+ * @property \App\Model\Entity\Profile $profile
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $modified
  * @property \App\Model\Entity\KeyBorrow[] $key_borrows
+ * @property \App\Model\Entity\Offer[] $offers
+ * @property \App\Model\Entity\Group[] $groups
  */
 class User extends Entity
 {
@@ -32,5 +32,14 @@ class User extends Entity
     protected $_accessible = [
         '*' => true,
         'id' => false,
+    ];
+
+    /**
+     * Fields that are excluded from JSON an array versions of the entity.
+     *
+     * @var array
+     */
+    protected $_hidden = [
+        'password'
     ];
 }

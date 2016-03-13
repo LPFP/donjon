@@ -7,7 +7,7 @@ use Cake\ORM\Entity;
  * Report Entity.
  *
  * @property int $id
- * @property string $summary
+ * @property string $report
  * @property int $type
  * @property int $status
  * @property \Cake\I18n\Time $created

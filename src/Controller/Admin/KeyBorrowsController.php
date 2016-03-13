@@ -19,7 +19,7 @@ class KeyBorrowsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Fabmanagers']
+            'contain' => ['Keys', 'Users']
         ];
         $keyBorrows = $this->paginate($this->KeyBorrows);
 
@@ -37,7 +37,7 @@ class KeyBorrowsController extends AppController
     public function view($id = null)
     {
         $keyBorrow = $this->KeyBorrows->get($id, [
-            'contain' => ['Fabmanagers']
+            'contain' => ['Keys', 'Users']
         ]);
 
         $this->set('keyBorrow', $keyBorrow);
@@ -61,8 +61,9 @@ class KeyBorrowsController extends AppController
                 $this->Flash->error(__('The key borrow could not be saved. Please, try again.'));
             }
         }
-        $fabmanagers = $this->KeyBorrows->Fabmanagers->find('list', ['limit' => 200]);
-        $this->set(compact('keyBorrow', 'fabmanagers'));
+        $keys = $this->KeyBorrows->Keys->find('list', ['limit' => 200]);
+        $users = $this->KeyBorrows->Users->find('list', ['limit' => 200]);
+        $this->set(compact('keyBorrow', 'keys', 'users'));
         $this->set('_serialize', ['keyBorrow']);
     }
 
@@ -87,8 +88,9 @@ class KeyBorrowsController extends AppController
                 $this->Flash->error(__('The key borrow could not be saved. Please, try again.'));
             }
         }
-        $fabmanagers = $this->KeyBorrows->Fabmanagers->find('list', ['limit' => 200]);
-        $this->set(compact('keyBorrow', 'fabmanagers'));
+        $keys = $this->KeyBorrows->Keys->find('list', ['limit' => 200]);
+        $users = $this->KeyBorrows->Users->find('list', ['limit' => 200]);
+        $this->set(compact('keyBorrow', 'keys', 'users'));
         $this->set('_serialize', ['keyBorrow']);
     }
 

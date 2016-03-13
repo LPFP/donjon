@@ -8,119 +8,101 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Donjon</a>
+            <a class="navbar-brand" href="/"><?php echo __("Dungeon") ?></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <!--
-               <li class="navbar-brand">
-                   <a class="" href="http://donjon.lepetitfablabdeparis.fr">Le Donjon</a>
-               </li>
-              <li class="navbar-brand">
-                   <a id="logo" href="http://lepetitfablabdeparis.fr">
-                       <img src="bootstrap/assets/logo-LPFP.png" alt="logo LPFP" width="100">
-                   </a>
-               </li>
-                -->
-                <?php
-                /*
-                if (!empty($menu)) :
-                    foreach ($menu as $pageName => $title) :
-                        $class = '';
-                        $thisPageIsCurrentViewedPage = strpos($currentPageName, $pageName) >= 1;
-                        if ($thisPageIsCurrentViewedPage) :
-                            $class = 'active';
-                            $this->set('pageTitle', $title);
-                        endif;
-                        ?>
-                        <li id="welcomeButton" class="<?php echo $class; ?>">
-                            <?php echo $this->Html->link($title, ['controller' => 'pages', 'action' => 'display', $pageName]); ?>
-                        </li>
-                        <?php
-                    endforeach;
-                endif;
-                */
-                ?>
 
 
 
-                                                         <li class="dropdown">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <?php echo __("Manage") ?><span class="caret"></span>
+                        <?php echo __("Management") ?><span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-            <li id="welcomeButton" class="<?php echo ""; ?>">
-                            <?php echo $this->Html->link(__("Scheduling"), ['controller' => 'pages', 'action' => 'display', 'scheduling'   ]); ?>
+                        <li id="welcomeButton" class="<?php echo ""; ?>">
+                            <?php echo $this->Html->link(__("Calendars"), ['prefix' => 'admin', 'controller' => 'Calendars', 'action' => 'index']); ?>
                         </li>
-
-                                                              <li id="">
+                        <li id="welcomeButton" class="<?php echo ""; ?>">
+                            <?php echo $this->Html->link(__("Calendars (old)"), ['prefix' => false, 'controller' => 'pages', 'action' => 'display', 'scheduling']); ?>
+                        </li>
+                        <li>
                             <?php
-                            echo $this->Html->link(__("Accounts"), ['controller' => 'accounts', 'action' => 'index' ]);
+                            echo $this->Html->link(__("Transactions"), ['prefix' => 'admin', 'controller' => 'transactions', 'action' => 'index']);
                             ?>
                         </li>
-                                                                         
-                        <li id="">
+                        <li class="divider"></li>
+                        <li>
                             <?php
-                            echo $this->Html->link(__("Key borrow"), ['controller' => 'KeyBorrows', 'action' => 'index' ]);
+                            echo $this->Html->link(__("Objects"), ['prefix' => 'admin', 'controller' => 'objects', 'action' => 'index']);
                             ?>
                         </li>
-                                                <li class="divider"></li>
-                        <li id="openingsButton">
+                        <li>
                             <?php
-                            echo $this->Html->link(__("Open door report"), ['controller' => 'reports', 'action' => 'index' , 'type' => 1 ]);
+                            echo $this->Html->link(__("Units"), ['prefix' => 'admin', 'controller' => 'units', 'action' => 'index']);
+                            ?>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <?php
+                            echo $this->Html->link(__("Forms"), ['prefix' => 'admin', 'controller' => 'Forms', 'action' => 'index', 'type' => 1]);
                             ?>
                         </li>
                     </ul>
                 </li>                                                        
 
-
-
-
-                                                         <li class="dropdown">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <?php echo __("Members") ?><span class="caret"></span>
+                        <?php echo __("Fabmanagers") ?><span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
+                        <li>
+                            <?php
+                            echo $this->Html->link(__("Key borrow"), ['prefix' => 'admin', 'controller' => 'KeyBorrows', 'action' => 'index']);
+                            ?>
+                        </li>
+                        <li id="openingsButton">
+                            <?php
+                            echo $this->Html->link(__("Reports"), ['prefix' => 'admin', 'controller' => 'reports', 'action' => 'index']);
+                            ?>
+                        </li>
 
-      
-                                                        <li id="">
+                    </ul>
+                </li>        
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <?php echo __("Members") ?><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li id="">
                             <?php
-                            echo $this->Html->link(__("Regular members"), ['controller' => 'Users', 'action' => 'index' , 'type' => 1]);
+                            echo $this->Html->link(__("Users"), ['prefix' => 'admin', 'controller' => 'Users', 'action' => 'index']);
                             ?>
                         </li>
-                                       <li id="">
+                        <li id="">
                             <?php
-                            echo $this->Html->link(__("Fabmanagers"), ['controller' => 'Users', 'action' => 'index' ,  'type' => 2]);
+                            echo $this->Html->link(__("Groups"), ['prefix' => 'admin', 'controller' => 'Groups', 'action' => 'index']);
                             ?>
                         </li>
-                        
-                        
                     </ul>
                 </li>
                 <!-- Forms -->
+
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        Formulaires<span class="caret"></span>
+                        <?php echo __("Others") ?><span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-
                         <li id="">
                             <?php
-                            echo $this->Html->link(__("New adherent form"), ['controller' => 'Forms', 'action' => 'index',  'type' => 1 ]);
+                            echo $this->Html->link(__("Offers"), ['prefix' => 'admin', 'controller' => 'Offers', 'action' => 'index']);
                             ?>
                         </li>
-                         <li id="">
-                            <?php
-                            echo $this->Html->link(__("Visitor form"), ['controller' => 'Forms', 'action' => 'index',  'type' => 1 ]);
-                            ?>
-                        </li>
-                         
-
                     </ul>
                 </li>
-                
-                
-                                <li class="dropdown">
+
+                <li class="dropdown ">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <?php echo __("External services") ?><span class="caret"></span>
                     </a>
@@ -131,7 +113,7 @@
                                 WIKI 
                             </a>
                         </li>
-        
+
                         <li id="" >
                             <a href="https://trello.com/lpfp" 
                                target="_blank">

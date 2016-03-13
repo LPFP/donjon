@@ -208,7 +208,10 @@ Type::build('datetime')
 ->useImmutable()
 ->useLocaleParser();
 
-Plugin::load('DebugKit', ['bootstrap' => true, 'routes' => true, 'autoload' => true]);
-Plugin::load('Keys', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);
+Plugin::load('Crud');
 
+Plugin::load('DebugKit', ['bootstrap' => true, 'routes' => true, 'autoload' => true]);
 Plugin::load('BakeBootstrap3Crud', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);
+# 
+Plugin::load('Josegonzalez/Upload');
+Plugin::load('Acl', ['bootstrap' => true]);

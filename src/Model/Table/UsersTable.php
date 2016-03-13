@@ -10,7 +10,10 @@ use Cake\Validation\Validator;
 /**
  * Users Model
  *
+ * @property \Cake\ORM\Association\BelongsTo $Profiles
  * @property \Cake\ORM\Association\HasMany $KeyBorrows
+ * @property \Cake\ORM\Association\HasMany $Offers
+ * @property \Cake\ORM\Association\BelongsToMany $Groups
  */
 class UsersTable extends Table
 {
@@ -26,13 +29,25 @@ class UsersTable extends Table
         parent::initialize($config);
 
         $this->table('users');
-        $this->displayField('name');
+        $this->displayField('id');
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');
 
+        $this->belongsTo('Profiles', [
+            'foreignKey' => 'profile_id',
+            'joinType' => 'INNER'
+        ]);
         $this->hasMany('KeyBorrows', [
             'foreignKey' => 'user_id'
+        ]);
+        $this->hasMany('Offers', [
+            'foreignKey' => 'user_id'
+        ]);
+        $this->belongsToMany('Groups', [
+            'foreignKey' => 'user_id',
+            'targetForeignKey' => 'group_id',
+            'joinTable' => 'groups_users'
         ]);
     }
 
@@ -49,31 +64,13 @@ class UsersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('firstname', 'create')
-            ->notEmpty('firstname');
-
-        $validator
-            ->requirePresence('name', 'create')
-            ->notEmpty('name');
-
-        $validator
             ->email('email')
             ->requirePresence('email', 'create')
             ->notEmpty('email');
 
         $validator
-            ->requirePresence('infos', 'create')
-            ->notEmpty('infos');
-
-        $validator
-            ->date('became_member_date')
-            ->requirePresence('became_member_date', 'create')
-            ->notEmpty('became_member_date');
-
-        $validator
-            ->integer('type')
-            ->requirePresence('type', 'create')
-            ->notEmpty('type');
+            ->requirePresence('password', 'create')
+            ->notEmpty('password');
 
         return $validator;
     }
@@ -88,6 +85,7 @@ class UsersTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['email']));
+        $rules->add($rules->existsIn(['profile_id'], 'Profiles'));
         return $rules;
     }
 }

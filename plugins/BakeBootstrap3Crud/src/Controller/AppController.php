@@ -2,9 +2,10 @@
 
 namespace BakeBootstrap3Crud\Controller;
 
-use App\Controller\AppController as BaseController;
+class AppController extends \Cake\Controller\Controller {
 
-class AppController extends BaseController
-{
+    use \Crud\Controller\ControllerTrait;
+
+    public $components = ['Crud.Crud'];
 
 }

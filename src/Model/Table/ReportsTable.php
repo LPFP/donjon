@@ -44,8 +44,8 @@ class ReportsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('summary', 'create')
-            ->notEmpty('summary');
+            ->requirePresence('report', 'create')
+            ->notEmpty('report');
 
         $validator
             ->integer('type')
