@@ -1,0 +1,1206 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-03-14 20:41+0000\n"
+"PO-Revision-Date: 2016-03-14 22:18+0100\n"
+"Last-Translator: Florian <florian@lemon-prod.fr>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.8.4\n"
+
+#: Controller/Admin/CalendarsController.php:55;80
+msgid "The calendar has been saved."
+msgstr "Calendriers sauvegardés"
+
+#: Controller/Admin/CalendarsController.php:58;83
+msgid "The calendar could not be saved. Please, try again."
+msgstr "Le calendrier ne peut pas être sauvegardé, merci de réessayer."
+
+#: Controller/Admin/CalendarsController.php:102
+msgid "The calendar has been deleted."
+msgstr "Le calendrier a été supprimé."
+
+#: Controller/Admin/CalendarsController.php:104
+msgid "The calendar could not be deleted. Please, try again."
+msgstr "Le calendrier ne peut pas être sauvegardé, merci de réessayer."
+
+#: Controller/Admin/EventsController.php:58;84
+msgid "The event has been saved."
+msgstr ""
+
+#: Controller/Admin/EventsController.php:61;87
+msgid "The event could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/EventsController.php:107
+msgid "The event has been deleted."
+msgstr ""
+
+#: Controller/Admin/EventsController.php:109
+msgid "The event could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/FormsController.php:55;80
+msgid "The form has been saved."
+msgstr ""
+
+#: Controller/Admin/FormsController.php:58;83
+msgid "The form could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/FormsController.php:102
+msgid "The form has been deleted."
+msgstr ""
+
+#: Controller/Admin/FormsController.php:104
+msgid "The form could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GroupsController.php:55;81
+msgid "The group has been saved."
+msgstr ""
+
+#: Controller/Admin/GroupsController.php:58;84
+msgid "The group could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GroupsController.php:104
+msgid "The group has been deleted."
+msgstr ""
+
+#: Controller/Admin/GroupsController.php:106
+msgid "The group could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GroupsUsersController.php:58;85
+msgid "The groups user has been saved."
+msgstr ""
+
+#: Controller/Admin/GroupsUsersController.php:61;88
+msgid "The groups user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GroupsUsersController.php:109
+msgid "The groups user has been deleted."
+msgstr ""
+
+#: Controller/Admin/GroupsUsersController.php:111
+msgid "The groups user could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/InventoriesController.php:55;80
+msgid "The inventory has been saved."
+msgstr ""
+
+#: Controller/Admin/InventoriesController.php:58;83
+msgid "The inventory could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/InventoriesController.php:102
+msgid "The inventory has been deleted."
+msgstr ""
+
+#: Controller/Admin/InventoriesController.php:104
+msgid "The inventory could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/KeyBorrowsController.php:58;85
+msgid "The key borrow has been saved."
+msgstr ""
+
+#: Controller/Admin/KeyBorrowsController.php:61;88
+msgid "The key borrow could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/KeyBorrowsController.php:109
+msgid "The key borrow has been deleted."
+msgstr ""
+
+#: Controller/Admin/KeyBorrowsController.php:111
+msgid "The key borrow could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/KeysController.php:55;80
+msgid "The key has been saved."
+msgstr ""
+
+#: Controller/Admin/KeysController.php:58;83
+msgid "The key could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/KeysController.php:102
+msgid "The key has been deleted."
+msgstr ""
+
+#: Controller/Admin/KeysController.php:104
+msgid "The key could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ObjectsController.php:58;84
+msgid "The object has been saved."
+msgstr ""
+
+#: Controller/Admin/ObjectsController.php:61;87
+msgid "The object could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ObjectsController.php:107
+msgid "The object has been deleted."
+msgstr ""
+
+#: Controller/Admin/ObjectsController.php:109
+msgid "The object could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/OffersController.php:58;84
+msgid "The offer has been saved."
+msgstr ""
+
+#: Controller/Admin/OffersController.php:61;87
+msgid "The offer could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/OffersController.php:107
+msgid "The offer has been deleted."
+msgstr ""
+
+#: Controller/Admin/OffersController.php:109
+msgid "The offer could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ProfilesController.php:55;80
+msgid "The profile has been saved."
+msgstr ""
+
+#: Controller/Admin/ProfilesController.php:58;83
+msgid "The profile could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ProfilesController.php:102
+msgid "The profile has been deleted."
+msgstr ""
+
+#: Controller/Admin/ProfilesController.php:104
+msgid "The profile could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ReportsController.php:55;80
+msgid "The report has been saved."
+msgstr ""
+
+#: Controller/Admin/ReportsController.php:58;83
+msgid "The report could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ReportsController.php:102
+msgid "The report has been deleted."
+msgstr ""
+
+#: Controller/Admin/ReportsController.php:104
+msgid "The report could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/TransactionTypesController.php:55;80
+msgid "The transaction type has been saved."
+msgstr ""
+
+#: Controller/Admin/TransactionTypesController.php:58;83
+msgid "The transaction type could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/TransactionTypesController.php:102
+msgid "The transaction type has been deleted."
+msgstr ""
+
+#: Controller/Admin/TransactionTypesController.php:104
+msgid "The transaction type could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:58;84
+msgid "The transaction has been saved."
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:61;87
+msgid "The transaction could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:107
+msgid "The transaction has been deleted."
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:109
+msgid "The transaction could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/UnitsController.php:58;84
+msgid "The unit has been saved."
+msgstr ""
+
+#: Controller/Admin/UnitsController.php:61;87
+msgid "The unit could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/UnitsController.php:107
+msgid "The unit has been deleted."
+msgstr ""
+
+#: Controller/Admin/UnitsController.php:109
+msgid "The unit could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:58;85
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:61;88
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:109
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:111
+msgid "The user could not be deleted. Please, try again."
+msgstr "L’utilisateur ne peut pas être sauvegardé, merci de réessayer."
+
+#: Template/Admin/Calendars/add.ctp:13 Template/Admin/Calendars/edit.ctp:21
+#: Template/Admin/Calendars/view.ctp:4 Template/Admin/Events/add.ctp:16
+#: Template/Admin/Events/edit.ctp:24 Template/Admin/Events/index.ctp:10
+#: Template/Admin/Events/view.ctp:6
+msgid "List Calendars"
+msgstr "Lister les calendrier"
+
+#: Template/Admin/Calendars/add.ctp:16 Template/Admin/Calendars/edit.ctp:24
+#: Template/Admin/Calendars/index.ctp:10 Template/Admin/Calendars/view.ctp:6
+#: Template/Admin/Events/add.ctp:13 Template/Admin/Events/edit.ctp:21
+#: Template/Admin/Events/view.ctp:4
+msgid "List Events"
+msgstr "Lister les évènements"
+
+#: Template/Admin/Calendars/add.ctp:22 Template/Admin/Calendars/edit.ctp:30
+#: Template/Admin/Calendars/index.ctp:12 Template/Admin/Calendars/view.ctp:7
+#: Template/Admin/Events/index.ctp:6 Template/Admin/Events/view.ctp:5
+msgid "New Event"
+msgstr "Nouvel Évènement"
+
+#: Template/Admin/Calendars/add.ctp:37
+msgid "Add Calendar"
+msgstr "Ajouter un calendrier"
+
+#: Template/Admin/Calendars/add.ctp:56 Template/Admin/Calendars/edit.ctp:64
+#: Template/Admin/Events/add.ctp:64 Template/Admin/Events/edit.ctp:72
+#: Template/Admin/Forms/add.ctp:46 Template/Admin/Forms/edit.ctp:54
+#: Template/Admin/Groups/add.ctp:59 Template/Admin/Groups/edit.ctp:67
+#: Template/Admin/GroupsUsers/add.ctp:72 Template/Admin/GroupsUsers/edit.ctp:80
+#: Template/Admin/Inventories/add.ctp:58 Template/Admin/Inventories/edit.ctp:66
+#: Template/Admin/KeyBorrows/add.ctp:72 Template/Admin/KeyBorrows/edit.ctp:80
+#: Template/Admin/Keys/add.ctp:56 Template/Admin/Keys/edit.ctp:64
+#: Template/Admin/Objects/add.ctp:72 Template/Admin/Objects/edit.ctp:80
+#: Template/Admin/Offers/add.ctp:64 Template/Admin/Offers/edit.ctp:72
+#: Template/Admin/Profiles/add.ctp:60 Template/Admin/Profiles/edit.ctp:68
+#: Template/Admin/Reports/add.ctp:46 Template/Admin/Reports/edit.ctp:54
+#: Template/Admin/TransactionTypes/add.ctp:58
+#: Template/Admin/TransactionTypes/edit.ctp:66
+#: Template/Admin/Transactions/add.ctp:66
+#: Template/Admin/Transactions/edit.ctp:74 Template/Admin/Units/add.ctp:62
+#: Template/Admin/Units/edit.ctp:70 Template/Admin/Users/add.ctp:103
+#: Template/Admin/Users/edit.ctp:111
+msgid "Submit"
+msgstr "Envoyer"
+
+#: Template/Admin/Calendars/edit.ctp:15 Template/Admin/Calendars/index.ctp:46
+#: Template/Admin/Calendars/view.ctp:59 Template/Admin/Events/edit.ctp:15
+#: Template/Admin/Events/index.ctp:52 Template/Admin/Forms/edit.ctp:15
+#: Template/Admin/Forms/index.ctp:42 Template/Admin/Groups/edit.ctp:15
+#: Template/Admin/Groups/index.ctp:48 Template/Admin/Groups/view.ctp:59
+#: Template/Admin/GroupsUsers/edit.ctp:15
+#: Template/Admin/GroupsUsers/index.ctp:50
+#: Template/Admin/Inventories/edit.ctp:15
+#: Template/Admin/Inventories/index.ctp:46
+#: Template/Admin/Inventories/view.ctp:57 Template/Admin/KeyBorrows/edit.ctp:15
+#: Template/Admin/KeyBorrows/index.ctp:52 Template/Admin/Keys/edit.ctp:15
+#: Template/Admin/Keys/index.ctp:46 Template/Admin/Keys/view.ctp:51
+#: Template/Admin/Objects/edit.ctp:15 Template/Admin/Objects/index.ctp:54
+#: Template/Admin/Objects/view.ctp:63 Template/Admin/Offers/edit.ctp:15
+#: Template/Admin/Offers/index.ctp:52 Template/Admin/Profiles/edit.ctp:15
+#: Template/Admin/Profiles/index.ctp:44 Template/Admin/Profiles/view.ctp:55
+#: Template/Admin/Reports/edit.ctp:15 Template/Admin/Reports/index.ctp:42
+#: Template/Admin/TransactionTypes/edit.ctp:15
+#: Template/Admin/TransactionTypes/index.ctp:46
+#: Template/Admin/TransactionTypes/view.ctp:65
+#: Template/Admin/Transactions/edit.ctp:15
+#: Template/Admin/Transactions/index.ctp:52 Template/Admin/Units/edit.ctp:15
+#: Template/Admin/Units/index.ctp:50 Template/Admin/Users/edit.ctp:15
+#: Template/Admin/Users/index.ctp:68 Template/Admin/Users/view.ctp:65;101;131
+msgid "Delete"
+msgstr "Supprimer"
+
+#: Template/Admin/Calendars/edit.ctp:18 Template/Admin/Calendars/index.ctp:48
+#: Template/Admin/Calendars/view.ctp:3;59 Template/Admin/Events/edit.ctp:18
+#: Template/Admin/Events/index.ctp:54 Template/Admin/Events/view.ctp:3
+#: Template/Admin/Forms/edit.ctp:18 Template/Admin/Forms/index.ctp:44
+#: Template/Admin/Forms/view.ctp:3 Template/Admin/Groups/edit.ctp:18
+#: Template/Admin/Groups/index.ctp:50 Template/Admin/Groups/view.ctp:3;59
+#: Template/Admin/GroupsUsers/edit.ctp:18
+#: Template/Admin/GroupsUsers/index.ctp:52
+#: Template/Admin/GroupsUsers/view.ctp:3 Template/Admin/Inventories/edit.ctp:18
+#: Template/Admin/Inventories/index.ctp:48
+#: Template/Admin/Inventories/view.ctp:3;57
+#: Template/Admin/KeyBorrows/edit.ctp:18 Template/Admin/KeyBorrows/index.ctp:54
+#: Template/Admin/KeyBorrows/view.ctp:3 Template/Admin/Keys/edit.ctp:18
+#: Template/Admin/Keys/index.ctp:48 Template/Admin/Keys/view.ctp:3;51
+#: Template/Admin/Objects/edit.ctp:18 Template/Admin/Objects/index.ctp:56
+#: Template/Admin/Objects/view.ctp:3;63 Template/Admin/Offers/edit.ctp:18
+#: Template/Admin/Offers/index.ctp:54 Template/Admin/Offers/view.ctp:3
+#: Template/Admin/Profiles/edit.ctp:18 Template/Admin/Profiles/index.ctp:46
+#: Template/Admin/Profiles/view.ctp:3;55 Template/Admin/Reports/edit.ctp:18
+#: Template/Admin/Reports/index.ctp:44 Template/Admin/Reports/view.ctp:3
+#: Template/Admin/TransactionTypes/edit.ctp:18
+#: Template/Admin/TransactionTypes/index.ctp:48
+#: Template/Admin/TransactionTypes/view.ctp:3;65
+#: Template/Admin/Transactions/edit.ctp:18
+#: Template/Admin/Transactions/index.ctp:54
+#: Template/Admin/Transactions/view.ctp:3 Template/Admin/Units/edit.ctp:18
+#: Template/Admin/Units/index.ctp:52 Template/Admin/Units/view.ctp:3
+#: Template/Admin/Users/edit.ctp:18 Template/Admin/Users/index.ctp:70
+#: Template/Admin/Users/view.ctp:3;65;101;131
+msgid "Are you sure you want to delete # {0}?"
+msgstr "Are you sure you want to delete # {0}?"
+
+#: Template/Admin/Calendars/edit.ctp:45 Template/Admin/Calendars/view.ctp:2
+msgid "Edit Calendar"
+msgstr "Modifier le calendrier"
+
+#: Template/Admin/Calendars/index.ctp:2 Template/Element/menu.ctp:24
+msgid "Calendars"
+msgstr "Calendriers"
+
+#: Template/Admin/Calendars/index.ctp:6 Template/Admin/Calendars/view.ctp:5
+#: Template/Admin/Events/add.ctp:22 Template/Admin/Events/edit.ctp:30
+#: Template/Admin/Events/index.ctp:12 Template/Admin/Events/view.ctp:7
+msgid "New Calendar"
+msgstr "Nouveau Calendrier"
+
+#: Template/Admin/Calendars/index.ctp:26 Template/Admin/Calendars/view.ctp:44
+#: Template/Admin/Events/index.ctp:29 Template/Admin/Forms/index.ctp:21
+#: Template/Admin/Groups/index.ctp:27 Template/Admin/Groups/view.ctp:46
+#: Template/Admin/GroupsUsers/index.ctp:31
+#: Template/Admin/Inventories/index.ctp:26
+#: Template/Admin/Inventories/view.ctp:45
+#: Template/Admin/KeyBorrows/index.ctp:32 Template/Admin/Keys/index.ctp:26
+#: Template/Admin/Keys/view.ctp:40 Template/Admin/Objects/index.ctp:33
+#: Template/Admin/Objects/view.ctp:49 Template/Admin/Offers/index.ctp:29
+#: Template/Admin/Profiles/index.ctp:25 Template/Admin/Profiles/view.ctp:42
+#: Template/Admin/Reports/index.ctp:21
+#: Template/Admin/TransactionTypes/index.ctp:26
+#: Template/Admin/TransactionTypes/view.ctp:49
+#: Template/Admin/Transactions/index.ctp:29 Template/Admin/Units/index.ctp:28
+#: Template/Admin/Users/index.ctp:46 Template/Admin/Users/view.ctp:54;86;119
+msgid "Actions"
+msgstr "Actions"
+
+#: Template/Admin/Calendars/index.ctp:38 Template/Admin/Calendars/view.ctp:57
+#: Template/Admin/Events/index.ctp:44 Template/Admin/Forms/index.ctp:34
+#: Template/Admin/Groups/index.ctp:40 Template/Admin/Groups/view.ctp:57
+#: Template/Admin/GroupsUsers/index.ctp:42
+#: Template/Admin/Inventories/index.ctp:38
+#: Template/Admin/Inventories/view.ctp:55
+#: Template/Admin/KeyBorrows/index.ctp:44 Template/Admin/Keys/index.ctp:38
+#: Template/Admin/Keys/view.ctp:49 Template/Admin/Objects/index.ctp:46
+#: Template/Admin/Objects/view.ctp:61 Template/Admin/Offers/index.ctp:44
+#: Template/Admin/Profiles/index.ctp:36 Template/Admin/Profiles/view.ctp:53
+#: Template/Admin/Reports/index.ctp:34
+#: Template/Admin/TransactionTypes/index.ctp:38
+#: Template/Admin/TransactionTypes/view.ctp:63
+#: Template/Admin/Transactions/index.ctp:44 Template/Admin/Units/index.ctp:42
+#: Template/Admin/Users/index.ctp:60 Template/Admin/Users/view.ctp:63;99;129
+msgid "View"
+msgstr "Voir"
+
+#: Template/Admin/Calendars/index.ctp:42 Template/Admin/Calendars/view.ctp:58
+#: Template/Admin/Events/index.ctp:48 Template/Admin/Forms/index.ctp:38
+#: Template/Admin/Groups/index.ctp:44 Template/Admin/Groups/view.ctp:58
+#: Template/Admin/GroupsUsers/index.ctp:46
+#: Template/Admin/Inventories/index.ctp:42
+#: Template/Admin/Inventories/view.ctp:56
+#: Template/Admin/KeyBorrows/index.ctp:48 Template/Admin/Keys/index.ctp:42
+#: Template/Admin/Keys/view.ctp:50 Template/Admin/Objects/index.ctp:50
+#: Template/Admin/Objects/view.ctp:62 Template/Admin/Offers/index.ctp:48
+#: Template/Admin/Profiles/index.ctp:40 Template/Admin/Profiles/view.ctp:54
+#: Template/Admin/Reports/index.ctp:38
+#: Template/Admin/TransactionTypes/index.ctp:42
+#: Template/Admin/TransactionTypes/view.ctp:64
+#: Template/Admin/Transactions/index.ctp:48 Template/Admin/Units/index.ctp:46
+#: Template/Admin/Users/index.ctp:64 Template/Admin/Users/view.ctp:64;100;130
+msgid "Edit"
+msgstr "Modifier"
+
+#: Template/Admin/Calendars/index.ctp:57 Template/Admin/Events/index.ctp:63
+#: Template/Admin/Forms/index.ctp:53 Template/Admin/Groups/index.ctp:59
+#: Template/Admin/GroupsUsers/index.ctp:61
+#: Template/Admin/Inventories/index.ctp:57
+#: Template/Admin/KeyBorrows/index.ctp:63 Template/Admin/Keys/index.ctp:57
+#: Template/Admin/Objects/index.ctp:65 Template/Admin/Offers/index.ctp:63
+#: Template/Admin/Profiles/index.ctp:55 Template/Admin/Reports/index.ctp:53
+#: Template/Admin/TransactionTypes/index.ctp:57
+#: Template/Admin/Transactions/index.ctp:63 Template/Admin/Units/index.ctp:61
+#: Template/Admin/Users/index.ctp:79
+msgid "previous"
+msgstr "précédent"
+
+#: Template/Admin/Calendars/index.ctp:59 Template/Admin/Events/index.ctp:65
+#: Template/Admin/Forms/index.ctp:55 Template/Admin/Groups/index.ctp:61
+#: Template/Admin/GroupsUsers/index.ctp:63
+#: Template/Admin/Inventories/index.ctp:59
+#: Template/Admin/KeyBorrows/index.ctp:65 Template/Admin/Keys/index.ctp:59
+#: Template/Admin/Objects/index.ctp:67 Template/Admin/Offers/index.ctp:65
+#: Template/Admin/Profiles/index.ctp:57 Template/Admin/Reports/index.ctp:55
+#: Template/Admin/TransactionTypes/index.ctp:59
+#: Template/Admin/Transactions/index.ctp:65 Template/Admin/Units/index.ctp:63
+#: Template/Admin/Users/index.ctp:81
+msgid "next"
+msgstr "suivant"
+
+#: Template/Admin/Calendars/view.ctp:3
+msgid "Delete Calendar"
+msgstr "Supprimer le calendrier"
+
+#: Template/Admin/Calendars/view.ctp:15 Template/Admin/Groups/view.ctp:15
+#: Template/Admin/Inventories/view.ctp:15;41 Template/Admin/Keys/view.ctp:15
+#: Template/Admin/Objects/view.ctp:17 Template/Admin/Profiles/view.ctp:15
+#: Template/Admin/TransactionTypes/view.ctp:15
+#: Template/Admin/Users/view.ctp:115
+msgid "Name"
+msgstr "Nom"
+
+#: Template/Admin/Calendars/view.ctp:19;36 Template/Admin/Events/view.ctp:23
+#: Template/Admin/Forms/view.ctp:17 Template/Admin/Groups/view.ctp:23;40
+#: Template/Admin/GroupsUsers/view.ctp:25
+#: Template/Admin/Inventories/view.ctp:19;40
+#: Template/Admin/KeyBorrows/view.ctp:25 Template/Admin/Keys/view.ctp:19;36
+#: Template/Admin/Objects/view.ctp:25;42 Template/Admin/Offers/view.ctp:19
+#: Template/Admin/Profiles/view.ctp:23;36 Template/Admin/Reports/view.ctp:13
+#: Template/Admin/TransactionTypes/view.ctp:19;40
+#: Template/Admin/Transactions/view.ctp:19 Template/Admin/Units/view.ctp:23
+#: Template/Admin/Users/view.ctp:33;50;78;114
+msgid "Id"
+msgstr "Id"
+
+#: Template/Admin/Calendars/view.ctp:23;41 Template/Admin/Events/view.ctp:35
+#: Template/Admin/Forms/view.ctp:25 Template/Admin/Groups/view.ctp:27;44
+#: Template/Admin/Inventories/view.ctp:23;42
+#: Template/Admin/KeyBorrows/view.ctp:29 Template/Admin/Keys/view.ctp:23;39
+#: Template/Admin/Objects/view.ctp:29;45 Template/Admin/Offers/view.ctp:31
+#: Template/Admin/Profiles/view.ctp:40 Template/Admin/Reports/view.ctp:25
+#: Template/Admin/TransactionTypes/view.ctp:23;45
+#: Template/Admin/Transactions/view.ctp:31 Template/Admin/Units/view.ctp:31
+#: Template/Admin/Users/view.ctp:37;53;83;117
+msgid "Created"
+msgstr "Créé"
+
+#: Template/Admin/Calendars/view.ctp:27;42 Template/Admin/Events/view.ctp:39
+#: Template/Admin/Forms/view.ctp:29 Template/Admin/Groups/view.ctp:31;45
+#: Template/Admin/Inventories/view.ctp:27;43 Template/Admin/Keys/view.ctp:27
+#: Template/Admin/Objects/view.ctp:33;46 Template/Admin/Offers/view.ctp:35
+#: Template/Admin/Profiles/view.ctp:41 Template/Admin/Reports/view.ctp:29
+#: Template/Admin/TransactionTypes/view.ctp:27;46
+#: Template/Admin/Transactions/view.ctp:35 Template/Admin/Units/view.ctp:35
+#: Template/Admin/Users/view.ctp:41;84;118
+msgid "Modified"
+msgstr "Modifié"
+
+#: Template/Admin/Calendars/view.ctp:32
+msgid "Related Events"
+msgstr "Évènements liés"
+
+#: Template/Admin/Calendars/view.ctp:37 Template/Admin/Events/view.ctp:15
+msgid "Title"
+msgstr "TItre"
+
+#: Template/Admin/Calendars/view.ctp:38 Template/Admin/Events/view.ctp:44
+msgid "Content"
+msgstr "Contenu"
+
+#: Template/Admin/Calendars/view.ctp:39 Template/Admin/Events/view.ctp:27
+msgid "Begin"
+msgstr "Début"
+
+#: Template/Admin/Calendars/view.ctp:40 Template/Admin/Events/view.ctp:31
+msgid "End"
+msgstr "Fin"
+
+#: Template/Admin/Calendars/view.ctp:43
+msgid "Calendar Id"
+msgstr "Id fu calendrier"
+
+#: Template/Admin/Events/add.ctp:37
+msgid "Add Event"
+msgstr "Ajouter un évènement"
+
+#: Template/Admin/Events/edit.ctp:45 Template/Admin/Events/view.ctp:2
+msgid "Edit Event"
+msgstr "Modifier l’évènement"
+
+#: Template/Admin/Events/index.ctp:2
+msgid "Events"
+msgstr "Évènements"
+
+#: Template/Admin/Events/view.ctp:3
+msgid "Delete Event"
+msgstr "Delete Event"
+
+#: Template/Admin/Events/view.ctp:19
+msgid "Calendar"
+msgstr "Calendar"
+
+#: Template/Admin/Forms/add.ctp:13 Template/Admin/Forms/edit.ctp:21
+#: Template/Admin/Forms/view.ctp:4
+msgid "List Forms"
+msgstr "List Forms"
+
+#: Template/Admin/Forms/add.ctp:23
+msgid "Add Form"
+msgstr "Add Form"
+
+#: Template/Admin/Forms/edit.ctp:31 Template/Admin/Forms/view.ctp:2
+msgid "Edit Form"
+msgstr "Edit Form"
+
+#: Template/Admin/Forms/index.ctp:2 Template/Element/menu.ctp:48
+msgid "Forms"
+msgstr "Forms"
+
+#: Template/Admin/Forms/index.ctp:6 Template/Admin/Forms/view.ctp:5
+msgid "New Form"
+msgstr "New Form"
+
+#: Template/Admin/Forms/view.ctp:3
+msgid "Delete Form"
+msgstr "Delete Form"
+
+#: Template/Admin/Forms/view.ctp:13 Template/Admin/Reports/view.ctp:17
+msgid "Type"
+msgstr "Type"
+
+#: Template/Admin/Forms/view.ctp:21 Template/Admin/Objects/view.ctp:44
+#: Template/Admin/Offers/view.ctp:27 Template/Admin/Reports/view.ctp:21
+#: Template/Admin/Units/view.ctp:27 Template/Admin/Users/view.ctp:82
+msgid "Status"
+msgstr "Status"
+
+#: Template/Admin/Forms/view.ctp:34
+msgid "Values"
+msgstr "Values"
+
+#: Template/Admin/Groups/add.ctp:13 Template/Admin/Groups/edit.ctp:21
+#: Template/Admin/Groups/view.ctp:4 Template/Admin/GroupsUsers/add.ctp:16
+#: Template/Admin/GroupsUsers/edit.ctp:24
+#: Template/Admin/GroupsUsers/index.ctp:10
+#: Template/Admin/GroupsUsers/view.ctp:6 Template/Admin/Users/add.ctp:58
+#: Template/Admin/Users/edit.ctp:66 Template/Admin/Users/index.ctp:28
+#: Template/Admin/Users/view.ctp:12
+msgid "List Groups"
+msgstr "List Groups"
+
+#: Template/Admin/Groups/add.ctp:16 Template/Admin/Groups/edit.ctp:24
+#: Template/Admin/Groups/index.ctp:10 Template/Admin/Groups/view.ctp:6
+#: Template/Admin/GroupsUsers/add.ctp:30 Template/Admin/GroupsUsers/edit.ctp:38
+#: Template/Admin/GroupsUsers/index.ctp:16
+#: Template/Admin/GroupsUsers/view.ctp:8 Template/Admin/KeyBorrows/add.ctp:30
+#: Template/Admin/KeyBorrows/edit.ctp:38 Template/Admin/KeyBorrows/index.ctp:16
+#: Template/Admin/KeyBorrows/view.ctp:8 Template/Admin/Offers/add.ctp:16
+#: Template/Admin/Offers/edit.ctp:24 Template/Admin/Offers/index.ctp:10
+#: Template/Admin/Offers/view.ctp:6 Template/Admin/Profiles/add.ctp:16
+#: Template/Admin/Profiles/edit.ctp:24 Template/Admin/Profiles/index.ctp:10
+#: Template/Admin/Profiles/view.ctp:6 Template/Admin/Users/add.ctp:13
+#: Template/Admin/Users/edit.ctp:21 Template/Admin/Users/view.ctp:4
+msgid "List Users"
+msgstr "List Users"
+
+#: Template/Admin/Groups/add.ctp:22 Template/Admin/Groups/edit.ctp:30
+#: Template/Admin/Groups/index.ctp:12 Template/Admin/Groups/view.ctp:7
+#: Template/Admin/GroupsUsers/add.ctp:36 Template/Admin/GroupsUsers/edit.ctp:44
+#: Template/Admin/GroupsUsers/index.ctp:18
+#: Template/Admin/GroupsUsers/view.ctp:9 Template/Admin/KeyBorrows/add.ctp:36
+#: Template/Admin/KeyBorrows/edit.ctp:44 Template/Admin/KeyBorrows/index.ctp:18
+#: Template/Admin/KeyBorrows/view.ctp:9 Template/Admin/Offers/add.ctp:22
+#: Template/Admin/Offers/edit.ctp:30 Template/Admin/Offers/index.ctp:12
+#: Template/Admin/Offers/view.ctp:7 Template/Admin/Profiles/add.ctp:22
+#: Template/Admin/Profiles/edit.ctp:30 Template/Admin/Profiles/index.ctp:12
+#: Template/Admin/Profiles/view.ctp:7 Template/Admin/Users/index.ctp:6
+#: Template/Admin/Users/view.ctp:5
+msgid "New User"
+msgstr "New User"
+
+#: Template/Admin/Groups/add.ctp:37
+msgid "Add Group"
+msgstr "Add Group"
+
+#: Template/Admin/Groups/edit.ctp:45 Template/Admin/Groups/view.ctp:2
+msgid "Edit Group"
+msgstr "Edit Group"
+
+#: Template/Admin/Groups/index.ctp:2 Template/Element/menu.ctp:84
+msgid "Groups"
+msgstr "Groups"
+
+#: Template/Admin/Groups/index.ctp:6 Template/Admin/Groups/view.ctp:5
+#: Template/Admin/GroupsUsers/add.ctp:22 Template/Admin/GroupsUsers/edit.ctp:30
+#: Template/Admin/GroupsUsers/index.ctp:12
+#: Template/Admin/GroupsUsers/view.ctp:7 Template/Admin/Users/add.ctp:64
+#: Template/Admin/Users/edit.ctp:72 Template/Admin/Users/index.ctp:30
+#: Template/Admin/Users/view.ctp:13
+msgid "New Group"
+msgstr "New Group"
+
+#: Template/Admin/Groups/view.ctp:3
+msgid "Delete Group"
+msgstr "Delete Group"
+
+#: Template/Admin/Groups/view.ctp:19 Template/Admin/Users/view.ctp:116
+msgid "Slug"
+msgstr "Slug"
+
+#: Template/Admin/Groups/view.ctp:36 Template/Admin/Profiles/view.ctp:32
+msgid "Related Users"
+msgstr "Related Users"
+
+#: Template/Admin/Groups/view.ctp:41 Template/Admin/Profiles/view.ctp:37
+#: Template/Admin/Users/view.ctp:21
+msgid "Email"
+msgstr "Courriel"
+
+#: Template/Admin/Groups/view.ctp:42 Template/Admin/Profiles/view.ctp:38
+#: Template/Admin/Users/view.ctp:25
+msgid "Password"
+msgstr "Mot de passe"
+
+#: Template/Admin/Groups/view.ctp:43 Template/Admin/Profiles/view.ctp:39
+msgid "Profile Id"
+msgstr "Id du profile"
+
+#: Template/Admin/GroupsUsers/add.ctp:13 Template/Admin/GroupsUsers/edit.ctp:21
+#: Template/Admin/GroupsUsers/view.ctp:4
+msgid "List Groups Users"
+msgstr "List Groups Users"
+
+#: Template/Admin/GroupsUsers/add.ctp:51
+msgid "Add Groups User"
+msgstr "Add Groups User"
+
+#: Template/Admin/GroupsUsers/edit.ctp:59 Template/Admin/GroupsUsers/view.ctp:2
+msgid "Edit Groups User"
+msgstr "Edit Groups User"
+
+#: Template/Admin/GroupsUsers/index.ctp:2
+msgid "Groups Users"
+msgstr "Groups Users"
+
+#: Template/Admin/GroupsUsers/index.ctp:6 Template/Admin/GroupsUsers/view.ctp:5
+msgid "New Groups User"
+msgstr "New Groups User"
+
+#: Template/Admin/GroupsUsers/view.ctp:3
+msgid "Delete Groups User"
+msgstr "Delete Groups User"
+
+#: Template/Admin/GroupsUsers/view.ctp:17
+msgid "Group"
+msgstr "Group"
+
+#: Template/Admin/GroupsUsers/view.ctp:21 Template/Admin/KeyBorrows/view.ctp:21
+#: Template/Admin/Offers/view.ctp:15
+msgid "User"
+msgstr "Utilisateur"
+
+#: Template/Admin/Inventories/add.ctp:13 Template/Admin/Inventories/edit.ctp:21
+#: Template/Admin/Inventories/view.ctp:4 Template/Admin/Objects/add.ctp:16
+#: Template/Admin/Objects/edit.ctp:24 Template/Admin/Objects/index.ctp:10
+#: Template/Admin/Objects/view.ctp:6
+msgid "List Inventories"
+msgstr "List Inventories"
+
+#: Template/Admin/Inventories/add.ctp:16 Template/Admin/Inventories/edit.ctp:24
+#: Template/Admin/Inventories/index.ctp:10
+#: Template/Admin/Inventories/view.ctp:6 Template/Admin/Objects/add.ctp:13
+#: Template/Admin/Objects/edit.ctp:21 Template/Admin/Objects/view.ctp:4
+#: Template/Admin/Units/add.ctp:16 Template/Admin/Units/edit.ctp:24
+#: Template/Admin/Units/index.ctp:10 Template/Admin/Units/view.ctp:6
+msgid "List Objects"
+msgstr "Liste des objets"
+
+#: Template/Admin/Inventories/add.ctp:22 Template/Admin/Inventories/edit.ctp:30
+#: Template/Admin/Inventories/index.ctp:12
+#: Template/Admin/Inventories/view.ctp:7 Template/Admin/Objects/index.ctp:6
+#: Template/Admin/Objects/view.ctp:5 Template/Admin/Units/add.ctp:22
+#: Template/Admin/Units/edit.ctp:30 Template/Admin/Units/index.ctp:12
+#: Template/Admin/Units/view.ctp:7
+msgid "New Object"
+msgstr "Nouvel Objet"
+
+#: Template/Admin/Inventories/add.ctp:37
+msgid "Add Inventory"
+msgstr "Ajouter un inventaire"
+
+#: Template/Admin/Inventories/edit.ctp:45 Template/Admin/Inventories/view.ctp:2
+msgid "Edit Inventory"
+msgstr "Modifier un inventaire"
+
+#: Template/Admin/Inventories/index.ctp:2
+msgid "Inventories"
+msgstr "Inventaires"
+
+#: Template/Admin/Inventories/index.ctp:6 Template/Admin/Inventories/view.ctp:5
+#: Template/Admin/Objects/add.ctp:22 Template/Admin/Objects/edit.ctp:30
+#: Template/Admin/Objects/index.ctp:12 Template/Admin/Objects/view.ctp:7
+msgid "New Inventory"
+msgstr "Nouvel inventaire"
+
+#: Template/Admin/Inventories/view.ctp:3
+msgid "Delete Inventory"
+msgstr "Supprimer l’inventaire"
+
+#: Template/Admin/Inventories/view.ctp:32 Template/Admin/Offers/view.ctp:44
+#: Template/Admin/TransactionTypes/view.ctp:42
+#: Template/Admin/Transactions/view.ctp:44 Template/Admin/Users/view.ctp:80
+msgid "Description"
+msgstr "Description"
+
+#: Template/Admin/Inventories/view.ctp:36
+msgid "Related Objects"
+msgstr "Related Objects"
+
+#: Template/Admin/Inventories/view.ctp:44
+msgid "Inventory Id"
+msgstr "Inventory Id"
+
+#: Template/Admin/KeyBorrows/add.ctp:13 Template/Admin/KeyBorrows/edit.ctp:21
+#: Template/Admin/KeyBorrows/view.ctp:4 Template/Admin/Keys/add.ctp:16
+#: Template/Admin/Keys/edit.ctp:24 Template/Admin/Keys/index.ctp:10
+#: Template/Admin/Keys/view.ctp:6 Template/Admin/Users/add.ctp:30
+#: Template/Admin/Users/edit.ctp:38 Template/Admin/Users/index.ctp:16
+#: Template/Admin/Users/view.ctp:8
+msgid "List Key Borrows"
+msgstr "List Key Borrows"
+
+#: Template/Admin/KeyBorrows/add.ctp:16 Template/Admin/KeyBorrows/edit.ctp:24
+#: Template/Admin/KeyBorrows/index.ctp:10 Template/Admin/KeyBorrows/view.ctp:6
+#: Template/Admin/Keys/add.ctp:13 Template/Admin/Keys/edit.ctp:21
+#: Template/Admin/Keys/view.ctp:4
+msgid "List Keys"
+msgstr "List Keys"
+
+#: Template/Admin/KeyBorrows/add.ctp:22 Template/Admin/KeyBorrows/edit.ctp:30
+#: Template/Admin/KeyBorrows/index.ctp:12 Template/Admin/KeyBorrows/view.ctp:7
+#: Template/Admin/Keys/index.ctp:6 Template/Admin/Keys/view.ctp:5
+msgid "New Key"
+msgstr "New Key"
+
+#: Template/Admin/KeyBorrows/add.ctp:51
+msgid "Add Key Borrow"
+msgstr "Add Key Borrow"
+
+#: Template/Admin/KeyBorrows/edit.ctp:59 Template/Admin/KeyBorrows/view.ctp:2
+msgid "Edit Key Borrow"
+msgstr "Edit Key Borrow"
+
+#: Template/Admin/KeyBorrows/index.ctp:2
+msgid "Key Borrows"
+msgstr "Key Borrows"
+
+#: Template/Admin/KeyBorrows/index.ctp:6 Template/Admin/KeyBorrows/view.ctp:5
+#: Template/Admin/Keys/add.ctp:22 Template/Admin/Keys/edit.ctp:30
+#: Template/Admin/Keys/index.ctp:12 Template/Admin/Keys/view.ctp:7
+#: Template/Admin/Users/add.ctp:36 Template/Admin/Users/edit.ctp:44
+#: Template/Admin/Users/index.ctp:18 Template/Admin/Users/view.ctp:9
+msgid "New Key Borrow"
+msgstr "Nouvel emprunt de clé"
+
+#: Template/Admin/KeyBorrows/view.ctp:3
+msgid "Delete Key Borrow"
+msgstr "Supprimer l’emprunt de clé"
+
+#: Template/Admin/KeyBorrows/view.ctp:17
+msgid "Key"
+msgstr "Clé"
+
+#: Template/Admin/Keys/add.ctp:37
+msgid "Add Key"
+msgstr "Ajouter une clé"
+
+#: Template/Admin/Keys/edit.ctp:45 Template/Admin/Keys/view.ctp:2
+msgid "Edit Key"
+msgstr "Modifier une clé"
+
+#: Template/Admin/Keys/index.ctp:2
+msgid "Keys"
+msgstr "Clés"
+
+#: Template/Admin/Keys/view.ctp:3
+msgid "Delete Key"
+msgstr "Supprimer la clé"
+
+#: Template/Admin/Keys/view.ctp:32 Template/Admin/Users/view.ctp:46
+msgid "Related Key Borrows"
+msgstr "Emprunts "
+
+#: Template/Admin/Keys/view.ctp:37 Template/Admin/Users/view.ctp:51
+msgid "Key Id"
+msgstr "Key Id"
+
+#: Template/Admin/Keys/view.ctp:38 Template/Admin/Users/view.ctp:52;85
+msgid "User Id"
+msgstr "User Id"
+
+#: Template/Admin/Objects/add.ctp:30 Template/Admin/Objects/edit.ctp:38
+#: Template/Admin/Objects/index.ctp:16 Template/Admin/Objects/view.ctp:8
+#: Template/Admin/Units/add.ctp:13 Template/Admin/Units/edit.ctp:21
+#: Template/Admin/Units/view.ctp:4
+msgid "List Units"
+msgstr "List Units"
+
+#: Template/Admin/Objects/add.ctp:36 Template/Admin/Objects/edit.ctp:44
+#: Template/Admin/Objects/index.ctp:18 Template/Admin/Objects/view.ctp:9
+#: Template/Admin/Units/index.ctp:6 Template/Admin/Units/view.ctp:5
+msgid "New Unit"
+msgstr "New Unit"
+
+#: Template/Admin/Objects/add.ctp:51
+msgid "Add Object"
+msgstr "Add Object"
+
+#: Template/Admin/Objects/edit.ctp:59 Template/Admin/Objects/view.ctp:2
+msgid "Edit Object"
+msgstr "Edit Object"
+
+#: Template/Admin/Objects/index.ctp:2 Template/Element/menu.ctp:37
+msgid "Objects"
+msgstr "Objects"
+
+#: Template/Admin/Objects/view.ctp:3
+msgid "Delete Object"
+msgstr "Delete Object"
+
+#: Template/Admin/Objects/view.ctp:21
+msgid "Inventory"
+msgstr "Inventory"
+
+#: Template/Admin/Objects/view.ctp:38
+msgid "Related Units"
+msgstr "Related Units"
+
+#: Template/Admin/Objects/view.ctp:43 Template/Admin/Units/view.ctp:40
+msgid "Infos"
+msgstr "Infos"
+
+#: Template/Admin/Objects/view.ctp:47
+msgid "Object Id"
+msgstr "Object Id"
+
+#: Template/Admin/Objects/view.ctp:48 Template/Admin/Units/view.ctp:19
+msgid "Uuid"
+msgstr "Uuid"
+
+#: Template/Admin/Offers/add.ctp:13 Template/Admin/Offers/edit.ctp:21
+#: Template/Admin/Offers/view.ctp:4 Template/Admin/Users/add.ctp:44
+#: Template/Admin/Users/edit.ctp:52 Template/Admin/Users/index.ctp:22
+#: Template/Admin/Users/view.ctp:10
+msgid "List Offers"
+msgstr "List Offers"
+
+#: Template/Admin/Offers/add.ctp:37
+msgid "Add Offer"
+msgstr "Add Offer"
+
+#: Template/Admin/Offers/edit.ctp:45 Template/Admin/Offers/view.ctp:2
+msgid "Edit Offer"
+msgstr "Edit Offer"
+
+#: Template/Admin/Offers/index.ctp:2 Template/Element/menu.ctp:99
+msgid "Offers"
+msgstr "Offers"
+
+#: Template/Admin/Offers/index.ctp:6 Template/Admin/Offers/view.ctp:5
+#: Template/Admin/Users/add.ctp:50 Template/Admin/Users/edit.ctp:58
+#: Template/Admin/Users/index.ctp:24 Template/Admin/Users/view.ctp:11
+msgid "New Offer"
+msgstr "New Offer"
+
+#: Template/Admin/Offers/view.ctp:3
+msgid "Delete Offer"
+msgstr "Delete Offer"
+
+#: Template/Admin/Offers/view.ctp:23 Template/Admin/Units/index.ctp:2
+#: Template/Admin/Users/view.ctp:81 Template/Element/menu.ctp:42
+msgid "Units"
+msgstr "Units"
+
+#: Template/Admin/Offers/view.ctp:39 Template/Admin/Users/view.ctp:79
+msgid "Offering Seeking"
+msgstr "Offering Seeking"
+
+#: Template/Admin/Offers/view.ctp:40 Template/Admin/Transactions/view.ctp:40
+msgid "Yes"
+msgstr "Yes"
+
+#: Template/Admin/Offers/view.ctp:40 Template/Admin/Transactions/view.ctp:40
+msgid "No"
+msgstr "No"
+
+#: Template/Admin/Profiles/add.ctp:13 Template/Admin/Profiles/edit.ctp:21
+#: Template/Admin/Profiles/view.ctp:4 Template/Admin/Users/add.ctp:16
+#: Template/Admin/Users/edit.ctp:24 Template/Admin/Users/index.ctp:10
+#: Template/Admin/Users/view.ctp:6
+msgid "List Profiles"
+msgstr "List Profiles"
+
+#: Template/Admin/Profiles/add.ctp:37
+msgid "Add Profile"
+msgstr "Add Profile"
+
+#: Template/Admin/Profiles/edit.ctp:45 Template/Admin/Profiles/view.ctp:2
+msgid "Edit Profile"
+msgstr "Edit Profile"
+
+#: Template/Admin/Profiles/index.ctp:2
+msgid "Profiles"
+msgstr "Profiles"
+
+#: Template/Admin/Profiles/index.ctp:6 Template/Admin/Profiles/view.ctp:5
+#: Template/Admin/Users/add.ctp:22 Template/Admin/Users/edit.ctp:30
+#: Template/Admin/Users/index.ctp:12 Template/Admin/Users/view.ctp:7
+msgid "New Profile"
+msgstr "New Profile"
+
+#: Template/Admin/Profiles/view.ctp:3
+msgid "Delete Profile"
+msgstr "Delete Profile"
+
+#: Template/Admin/Profiles/view.ctp:19
+msgid "Firstname"
+msgstr "Firstname"
+
+#: Template/Admin/Profiles/view.ctp:28
+msgid "Biography"
+msgstr "Biography"
+
+#: Template/Admin/Reports/add.ctp:13 Template/Admin/Reports/edit.ctp:21
+#: Template/Admin/Reports/view.ctp:4
+msgid "List Reports"
+msgstr "List Reports"
+
+#: Template/Admin/Reports/add.ctp:23
+msgid "Add Report"
+msgstr "Add Report"
+
+#: Template/Admin/Reports/edit.ctp:31 Template/Admin/Reports/view.ctp:2
+msgid "Edit Report"
+msgstr "Edit Report"
+
+#: Template/Admin/Reports/index.ctp:2 Template/Element/menu.ctp:66
+msgid "Reports"
+msgstr "Reports"
+
+#: Template/Admin/Reports/index.ctp:6 Template/Admin/Reports/view.ctp:5
+msgid "New Report"
+msgstr "New Report"
+
+#: Template/Admin/Reports/view.ctp:3
+msgid "Delete Report"
+msgstr "Delete Report"
+
+#: Template/Admin/Reports/view.ctp:34
+msgid "Report"
+msgstr "Report"
+
+#: Template/Admin/TransactionTypes/add.ctp:13
+#: Template/Admin/TransactionTypes/edit.ctp:21
+#: Template/Admin/TransactionTypes/view.ctp:4
+#: Template/Admin/Transactions/add.ctp:16
+#: Template/Admin/Transactions/edit.ctp:24
+#: Template/Admin/Transactions/index.ctp:10
+#: Template/Admin/Transactions/view.ctp:6
+msgid "List Transaction Types"
+msgstr "List Transaction Types"
+
+#: Template/Admin/TransactionTypes/add.ctp:16
+#: Template/Admin/TransactionTypes/edit.ctp:24
+#: Template/Admin/TransactionTypes/index.ctp:10
+#: Template/Admin/TransactionTypes/view.ctp:6
+#: Template/Admin/Transactions/add.ctp:13
+#: Template/Admin/Transactions/edit.ctp:21
+#: Template/Admin/Transactions/view.ctp:4
+msgid "List Transactions"
+msgstr "List Transactions"
+
+#: Template/Admin/TransactionTypes/add.ctp:22
+#: Template/Admin/TransactionTypes/edit.ctp:30
+#: Template/Admin/TransactionTypes/index.ctp:12
+#: Template/Admin/TransactionTypes/view.ctp:7
+#: Template/Admin/Transactions/index.ctp:6
+#: Template/Admin/Transactions/view.ctp:5
+msgid "New Transaction"
+msgstr "New Transaction"
+
+#: Template/Admin/TransactionTypes/add.ctp:37
+msgid "Add Transaction Type"
+msgstr "Add Transaction Type"
+
+#: Template/Admin/TransactionTypes/edit.ctp:45
+#: Template/Admin/TransactionTypes/view.ctp:2
+msgid "Edit Transaction Type"
+msgstr "Edit Transaction Type"
+
+#: Template/Admin/TransactionTypes/index.ctp:2
+msgid "Transaction Types"
+msgstr "Transaction Types"
+
+#: Template/Admin/TransactionTypes/index.ctp:6
+#: Template/Admin/TransactionTypes/view.ctp:5
+#: Template/Admin/Transactions/add.ctp:22
+#: Template/Admin/Transactions/edit.ctp:30
+#: Template/Admin/Transactions/index.ctp:12
+#: Template/Admin/Transactions/view.ctp:7
+msgid "New Transaction Type"
+msgstr "New Transaction Type"
+
+#: Template/Admin/TransactionTypes/view.ctp:3
+msgid "Delete Transaction Type"
+msgstr "Delete Transaction Type"
+
+#: Template/Admin/TransactionTypes/view.ctp:32
+msgid "Informations"
+msgstr "Informations"
+
+#: Template/Admin/TransactionTypes/view.ctp:36
+msgid "Related Transactions"
+msgstr "Related Transactions"
+
+#: Template/Admin/TransactionTypes/view.ctp:41
+#: Template/Admin/Transactions/view.ctp:23
+msgid "Amount"
+msgstr "Montant"
+
+#: Template/Admin/TransactionTypes/view.ctp:43
+#: Template/Admin/Transactions/view.ctp:48
+msgid "Metas"
+msgstr "Métas"
+
+#: Template/Admin/TransactionTypes/view.ctp:44
+#: Template/Admin/Transactions/view.ctp:39
+msgid "Is Income"
+msgstr "Rentrée"
+
+#: Template/Admin/TransactionTypes/view.ctp:47
+#: Template/Admin/Transactions/view.ctp:27
+msgid "Created By"
+msgstr "Créé par"
+
+#: Template/Admin/TransactionTypes/view.ctp:48
+msgid "Transaction Type Id"
+msgstr "Id du type de transaction"
+
+#: Template/Admin/Transactions/add.ctp:37
+msgid "Add Transaction"
+msgstr "Ajouter une transaction"
+
+#: Template/Admin/Transactions/edit.ctp:45
+#: Template/Admin/Transactions/view.ctp:2
+msgid "Edit Transaction"
+msgstr "Modifier la transaction"
+
+#: Template/Admin/Transactions/index.ctp:2 Template/Element/menu.ctp:31
+msgid "Transactions"
+msgstr "Transactions"
+
+#: Template/Admin/Transactions/view.ctp:3
+msgid "Delete Transaction"
+msgstr "Delete Transaction"
+
+#: Template/Admin/Transactions/view.ctp:15
+msgid "Transaction Type"
+msgstr "Type de transaction"
+
+#: Template/Admin/Units/add.ctp:37
+msgid "Add Unit"
+msgstr "Ajouter une unité"
+
+#: Template/Admin/Units/edit.ctp:45 Template/Admin/Units/view.ctp:2
+msgid "Edit Unit"
+msgstr "Modifier une unité"
+
+#: Template/Admin/Units/view.ctp:3
+msgid "Delete Unit"
+msgstr "Supprimer l’unité"
+
+#: Template/Admin/Units/view.ctp:15
+msgid "Object"
+msgstr "Object"
+
+#: Template/Admin/Users/add.ctp:79
+msgid "Add User"
+msgstr "Ajouter un utilisateur"
+
+#: Template/Admin/Users/edit.ctp:87 Template/Admin/Users/view.ctp:2
+msgid "Edit User"
+msgstr "Edit User"
+
+#: Template/Admin/Users/index.ctp:2 Template/Element/menu.ctp:79
+msgid "Users"
+msgstr "Users"
+
+#: Template/Admin/Users/view.ctp:3
+msgid "Delete User"
+msgstr "Delete User"
+
+#: Template/Admin/Users/view.ctp:29
+msgid "Profile"
+msgstr "Profile"
+
+#: Template/Admin/Users/view.ctp:74
+msgid "Related Offers"
+msgstr "Petites annonces liées"
+
+#: Template/Admin/Users/view.ctp:110
+msgid "Related Groups"
+msgstr "Related Groups"
+
+#: Template/Element/menu.ctp:11
+msgid "Dungeon"
+msgstr "Dungeon"
+
+#: Template/Element/menu.ctp:20
+msgid "Management"
+msgstr "Gestion"
+
+#: Template/Element/menu.ctp:27
+msgid "Calendars (old)"
+msgstr "Calendars (old)"
+
+#: Template/Element/menu.ctp:56
+msgid "Fabmanagers"
+msgstr "Fabmanagers"
+
+#: Template/Element/menu.ctp:61
+msgid "Key borrow"
+msgstr "Key borrow"
+
+#: Template/Element/menu.ctp:74
+msgid "Members"
+msgstr "Members"
+
+#: Template/Element/menu.ctp:94
+msgid "Others"
+msgstr "Autres"
+
+#: Template/Element/menu.ctp:107
+msgid "External services"
+msgstr "Services Externes"
