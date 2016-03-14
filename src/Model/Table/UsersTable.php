@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use App\Model\Entity\User;
@@ -15,8 +16,7 @@ use Cake\Validation\Validator;
  * @property \Cake\ORM\Association\HasMany $Offers
  * @property \Cake\ORM\Association\BelongsToMany $Groups
  */
-class UsersTable extends Table
-{
+class UsersTable extends Table {
 
     /**
      * Initialize method
@@ -24,8 +24,7 @@ class UsersTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
-    {
+    public function initialize(array $config) {
         parent::initialize($config);
 
         $this->table('users');
@@ -36,7 +35,7 @@ class UsersTable extends Table
 
         $this->belongsTo('Profiles', [
             'foreignKey' => 'profile_id',
-            'joinType' => 'INNER'
+            'joinType'   => 'INNER'
         ]);
         $this->hasMany('KeyBorrows', [
             'foreignKey' => 'user_id'
@@ -45,9 +44,9 @@ class UsersTable extends Table
             'foreignKey' => 'user_id'
         ]);
         $this->belongsToMany('Groups', [
-            'foreignKey' => 'user_id',
+            'foreignKey'       => 'user_id',
             'targetForeignKey' => 'group_id',
-            'joinTable' => 'groups_users'
+            'joinTable'        => 'groups_users'
         ]);
     }
 
@@ -57,20 +56,19 @@ class UsersTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
-    {
+    public function validationDefault(Validator $validator) {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
+        ->integer('id')
+        ->allowEmpty('id', 'create');
 
         $validator
-            ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmpty('email');
+        ->email('email')
+        ->requirePresence('email', 'create')
+        ->notEmpty('email');
 
         $validator
-            ->requirePresence('password', 'create')
-            ->notEmpty('password');
+        ->requirePresence('password', 'create')
+        ->notEmpty('password');
 
         return $validator;
     }
@@ -82,10 +80,10 @@ class UsersTable extends Table
      * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
      * @return \Cake\ORM\RulesChecker
      */
-    public function buildRules(RulesChecker $rules)
-    {
+    public function buildRules(RulesChecker $rules) {
         $rules->add($rules->isUnique(['email']));
         $rules->add($rules->existsIn(['profile_id'], 'Profiles'));
         return $rules;
     }
+
 }

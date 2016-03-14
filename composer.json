@@ -12,7 +12,8 @@
         "cakephp/plugin-installer": "*",
         "friendsofcake/crud": "~4.2",
         "josegonzalez/cakephp-upload": "^3.2",
-        "cakephp/acl": "^0.1.0"
+        "cakephp/acl": "^0.1.0",
+        "davidyell/proffer": "~0.6"
     },
     "require-dev": {
         "psy/psysh": "@stable",

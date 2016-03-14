@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
@@ -8,16 +9,14 @@ use App\Controller\AppController;
  *
  * @property \App\Model\Table\ProfilesTable $Profiles
  */
-class ProfilesController extends AppController
-{
+class ProfilesController extends AppController {
 
     /**
      * Index method
      *
      * @return \Cake\Network\Response|null
      */
-    public function index()
-    {
+    public function index() {
         $profiles = $this->paginate($this->Profiles);
 
         $this->set(compact('profiles'));
@@ -31,8 +30,7 @@ class ProfilesController extends AppController
      * @return \Cake\Network\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
-    {
+    public function view($id = null) {
         $profile = $this->Profiles->get($id, [
             'contain' => ['Users']
         ]);
@@ -46,8 +44,7 @@ class ProfilesController extends AppController
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
+    public function add() {
         $profile = $this->Profiles->newEntity();
         if ($this->request->is('post')) {
             $profile = $this->Profiles->patchEntity($profile, $this->request->data);
@@ -69,8 +66,7 @@ class ProfilesController extends AppController
      * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
-    {
+    public function edit($id = null) {
         $profile = $this->Profiles->get($id, [
             'contain' => []
         ]);
@@ -94,8 +90,7 @@ class ProfilesController extends AppController
      * @return \Cake\Network\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
-    {
+    public function delete($id = null) {
         $this->request->allowMethod(['post', 'delete']);
         $profile = $this->Profiles->get($id);
         if ($this->Profiles->delete($profile)) {
@@ -105,4 +100,5 @@ class ProfilesController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+
 }

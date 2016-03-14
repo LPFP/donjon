@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use App\Model\Entity\Profile;
@@ -6,14 +7,14 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use App\Lib\ProfferConfigurator;
 
 /**
  * Profiles Model
  *
  * @property \Cake\ORM\Association\HasMany $Users
  */
-class ProfilesTable extends Table
-{
+class ProfilesTable extends Table {
 
     /**
      * Initialize method
@@ -21,8 +22,7 @@ class ProfilesTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
-    {
+    public function initialize(array $config) {
         parent::initialize($config);
 
         $this->table('profiles');
@@ -32,6 +32,30 @@ class ProfilesTable extends Table
         $this->hasMany('Users', [
             'foreignKey' => 'profile_id'
         ]);
+        $this->addBehavior('Proffer.Proffer', [
+            'avatar' => [
+                'root'            => WWW_ROOT . 'files', // Customise the root upload folder here, or omit to use the default
+                'dir'             => 'avatar_dir', // The name of the field to store the folder
+                'thumbnailSizes'  => [
+                    'square'       => [
+                        'w'                     => 200,
+                        'h'                     => 200,
+                        'crop'                  => true,
+                        'jpeg_quality'          => 100,
+                        'png_compression_level' => 9
+                    ],
+                    'littleSquare' => [
+                        'w'                     => 100,
+                        'h'                     => 100,
+                        'crop'                  => true,
+                        'jpeg_quality'          => 100,
+                        'png_compression_level' => 9
+                    ],
+                ],
+                'thumbnailMethod' => 'Gd'  // Options are Imagick, Gd or Gmagick
+            ]
+        ]
+        );
     }
 
     /**
@@ -40,24 +64,24 @@ class ProfilesTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
-    {
+    public function validationDefault(Validator $validator) {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
+        ->integer('id')
+        ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('name', 'create')
-            ->notEmpty('name');
+        ->requirePresence('name', 'create')
+        ->notEmpty('name');
 
         $validator
-            ->requirePresence('firstname', 'create')
-            ->notEmpty('firstname');
+        ->requirePresence('firstname', 'create')
+        ->notEmpty('firstname');
 
         $validator
-            ->requirePresence('biography', 'create')
-            ->notEmpty('biography');
+        ->requirePresence('biography', 'create')
+        ->notEmpty('biography');
 
         return $validator;
     }
+
 }

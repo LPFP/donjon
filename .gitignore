@@ -3,5 +3,5 @@
 /tmp/*
 /logs/*
 /nbproject
-/composer.lock
 .DS_Store
+/webroot/files/*

@@ -22,6 +22,8 @@ require __DIR__ . '/paths.php';
 // Use composer to load the autoloader.
 require ROOT . DS . 'vendor' . DS . 'autoload.php';
 
+
+
 /**
  * Bootstrap CakePHP.
  *
@@ -96,7 +98,13 @@ mb_internal_encoding(Configure::read('App.encoding'));
  * Set the default locale. This controls how dates, number and currency is
  * formatted and sets the default language to use for translations.
  */
-ini_set('intl.default_locale', 'en_US');
+ini_set('intl.default_locale', 'fr_FR');
+# Set locale based on browser headers setup
+#DispatcherFactory::add('LocaleSelector', [
+#    'locales' => [ 'fr_FR', 'en_US',]
+#]);
+
+
 
 /**
  * Register application error and exception handlers.
@@ -208,10 +216,18 @@ Type::build('datetime')
 ->useImmutable()
 ->useLocaleParser();
 
-Plugin::load('Crud');
 
+# Developpement
 Plugin::load('DebugKit', ['bootstrap' => true, 'routes' => true, 'autoload' => true]);
+Plugin::load('Crud');
 Plugin::load('BakeBootstrap3Crud', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);
-# 
-Plugin::load('Josegonzalez/Upload');
+# Users & Auth
 Plugin::load('Acl', ['bootstrap' => true]);
+# Assets
+Plugin::load('Josegonzalez/Upload');
+Plugin::load('Proffer');
+
+
+# Events
+Cake\Event\EventManager::instance()->on(new \App\Event\ProfferUploadFilenameListener());
+Cake\Event\EventManager::instance()->on(new \App\Event\ProfferInputOutputListener());
