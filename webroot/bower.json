@@ -1,0 +1,22 @@
+{
+  "name": "bower",
+  "homepage": "https://github.com/LPFP/donjon",
+  "authors": [
+    "Florian <floriangendrot@gmail.com>"
+  ],
+  "description": "Js Requirement for this project",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fancyBox": "fancyapps/fancyBox#~2.1.5",
+    "fullcalendar": "~2.6.1"
+  }
+}

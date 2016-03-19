@@ -32,14 +32,16 @@ class EventsController extends AppController {
             ->find('all')
             ->where('1=1')
             ->andWhere(['calendar_id IN' => $calendars])
-            ->andWhere(['begin BETWEEN :start AND :end'])
+            ->andWhere(['start BETWEEN :start AND :end'])
             ->bind(':start', new \DateTime($this->request->query('start') . ' 00:00:00'), 'date')
             ->bind(':end', new \DateTime($this->request->query('end') . ' 23:59:59'), 'date')
             ;
         }
+
         $this->set([
             'events' => $events
         ]);
+
         /*
           "id": 1,
           "title": "test",

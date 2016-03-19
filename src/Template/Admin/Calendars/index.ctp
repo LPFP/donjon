@@ -83,11 +83,6 @@ $this->Html->script([
             $(this).attr('disabled', function(index, attr) {
                 return attr === 'disabled' ? null : 'disabled';
             });
-            ;
-            $(".toggleCalendarAction.displayed").each(function(index, item) {
-                calendars.push($(this).attr('data-id'));
-            });
-            console.info(calendars);
             calendar.fullCalendar('refetchEvents');
             return;
         });
@@ -100,12 +95,31 @@ $this->Html->script([
                 contentType: "application/json; charset=utf-8",
                 cache: true,
                 data: function() {
+                    calendars = [];
+                    $(".toggleCalendarAction.displayed").each(function(index, item) {
+                        calendars.push($(this).attr('data-id'));
+                    });
+                    console.log(calendars);
                     return {
-                        // start and end params are automatically
-                        // included by fullcalendar
                         calendars: calendars
                     };
+                },
+                success: function(data) {
+                    return data.events;
+                },
+            },
+            customButtons: {
+                addCalendar: {
+                    text: '<?php echo __('Add Calendar') ?>',
+                    click: function() {
+                        window.location = '<?php echo $this->Url->build([ 'controller' => 'calendars', 'action' => 'add']) ?>';
+                    }
                 }
+            },
+            header: {
+                left: 'addCalendar prev,next ',
+                center: 'title',
+                right: 'today month,agendaWeek,agendaDay'
             }
         });
     });
