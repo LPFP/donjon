@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
@@ -8,20 +9,19 @@ use App\Controller\AppController;
  *
  * @property \App\Model\Table\CalendarsTable $Calendars
  */
-class CalendarsController extends AppController
-{
+class CalendarsController extends AppController {
 
     /**
      * Index method
      *
      * @return \Cake\Network\Response|null
      */
-    public function index()
-    {
-        $calendars = $this->paginate($this->Calendars);
-
-        $this->set(compact('calendars'));
-        $this->set('_serialize', ['calendars']);
+    public function index() {
+        $calendars = $this->Calendars->find('all')->order('name');
+        $this->set([
+            'calendars' => $calendars
+        ]);
+        #$this->set('_serialize', ['calendars']);
     }
 
     /**
@@ -31,8 +31,7 @@ class CalendarsController extends AppController
      * @return \Cake\Network\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
-    {
+    public function view($id = null) {
         $calendar = $this->Calendars->get($id, [
             'contain' => ['Events']
         ]);
@@ -46,8 +45,7 @@ class CalendarsController extends AppController
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
+    public function add() {
         $calendar = $this->Calendars->newEntity();
         if ($this->request->is('post')) {
             $calendar = $this->Calendars->patchEntity($calendar, $this->request->data);
@@ -69,8 +67,7 @@ class CalendarsController extends AppController
      * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
-    {
+    public function edit($id = null) {
         $calendar = $this->Calendars->get($id, [
             'contain' => []
         ]);
@@ -94,8 +91,7 @@ class CalendarsController extends AppController
      * @return \Cake\Network\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
-    {
+    public function delete($id = null) {
         $this->request->allowMethod(['post', 'delete']);
         $calendar = $this->Calendars->get($id);
         if ($this->Calendars->delete($calendar)) {
@@ -105,4 +101,5 @@ class CalendarsController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+
 }

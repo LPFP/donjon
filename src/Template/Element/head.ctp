@@ -5,11 +5,11 @@
 <?php echo $this->Html->charset() ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<?= $this->fetch('meta') ?>
+<?php echo $this->fetch('meta') ?>
 
 <title>
     Donjon LPFP - 
-    <?= $this->fetch('title') ?>
+    <?php echo $this->fetch('title') ?>
 </title>
 
 <!-- 
@@ -17,7 +17,7 @@
     <link href="./css/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
 -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/flatly/bootstrap.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -27,4 +27,6 @@
 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link href="/css/main.css" rel="stylesheet" /> 
-<?= $this->fetch('css') ?>
+
+<?php
+echo $this->fetch('css');

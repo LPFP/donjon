@@ -15,4 +15,6 @@ Installation
 
 .. Create app tables ::
         bin/cake migrations migrate
-        
+
+.. IMPORTANT : Add this to your database conf as table name are using reseved SQL words ::
+    'quoteIdentifiers' => true,
