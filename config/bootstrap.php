@@ -231,3 +231,6 @@ Plugin::load('Proffer');
 # Events
 Cake\Event\EventManager::instance()->on(new \App\Event\ProfferUploadFilenameListener());
 Cake\Event\EventManager::instance()->on(new \App\Event\ProfferInputOutputListener());
+
+# Types
+Type::map('json', 'App\Database\Type\JsonType');

@@ -23,7 +23,7 @@ class EventsController extends AppController {
     public function getCalendarsEvents() {
         $calendars = $this->request->query('calendars');
         $events    = [];
-        #
+
         if ($calendars === null) {
             $calendars = [];
         }
@@ -42,16 +42,6 @@ class EventsController extends AppController {
             'events' => $events
         ]);
 
-        /*
-          "id": 1,
-          "title": "test",
-          "content": "qfdsfqsdfqsd q sfqfsdqfsd ",
-          "begin": "2016-03-16T23:10:00+0000",
-          "end": "2016-03-16T23:10:00+0000",
-          "created": "2016-03-16T23:10:55+0000",
-          "modified": "2016-03-16T23:10:55+0000",
-          "calendar_id": 1
-         */
         $this->request->session()->write('calendars.displayed', array_unique($calendars));
         $this->RequestHandler->renderAs($this, 'json');
         $this->response->type('application/json');
@@ -64,9 +54,7 @@ class EventsController extends AppController {
      * @return \Cake\Network\Response|null
      */
     public function index() {
-        if (!$this->request->session()->check('calendars.displayed')) {
-            $this->request->session()->write('calendars.displayed', []);
-        }
+
         $this->paginate = [
             'contain' => ['Calendars']
         ];
@@ -98,15 +86,18 @@ class EventsController extends AppController {
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
     public function add() {
+        $this->viewBuilder()->layout("empty");
         $event = $this->Events->newEntity();
-        if ($this->request->is('post')) {
-            $event = $this->Events->patchEntity($event, $this->request->data);
-            if ($this->Events->save($event)) {
-                $this->Flash->success(__('The event has been saved.'));
-                return $this->redirect(['action' => 'index']);
-            } else {
-                $this->Flash->error(__('The event could not be saved. Please, try again.'));
-            }
+
+        if (!$this->request->is('post')) {
+            return;
+        }
+        $event = $this->Events->patchEntity($event, $this->request->data);
+        if ($this->Events->save($event)) {
+            $this->Flash->success(__('The event has been saved.'));
+            return $this->redirect(['action' => 'index']);
+        } else {
+            $this->Flash->error(__('The event could not be saved. Please, try again.'));
         }
         $calendars = $this->Events->Calendars->find('list', ['limit' => 200]);
         $this->set(compact('event', 'calendars'));
@@ -121,6 +112,8 @@ class EventsController extends AppController {
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null) {
+        $this->viewBuilder()->layout("empty");
+
         $event = $this->Events->get($id, [
             'contain' => []
         ]);
@@ -128,7 +121,7 @@ class EventsController extends AppController {
             $event = $this->Events->patchEntity($event, $this->request->data);
             if ($this->Events->save($event)) {
                 $this->Flash->success(__('The event has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect([ 'controller' => 'fancybox', 'action' => 'close']);
             } else {
                 $this->Flash->error(__('The event could not be saved. Please, try again.'));
             }
@@ -150,6 +143,7 @@ class EventsController extends AppController {
         $event = $this->Events->get($id);
         if ($this->Events->delete($event)) {
             $this->Flash->success(__('The event has been deleted.'));
+            return $this->redirect([ 'controller' => 'fancybox', 'action' => 'close']);
         } else {
             $this->Flash->error(__('The event could not be deleted. Please, try again.'));
         }

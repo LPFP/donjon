@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
@@ -12,20 +13,15 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $modified
  * @property \App\Model\Entity\Event[] $events
  */
-class Calendar extends Entity
-{
+class Calendar extends Entity {
 
-    /**
-     * Fields that can be mass assigned using newEntity() or patchEntity().
-     *
-     * Note that when '*' is set to true, this allows all unspecified fields to
-     * be mass assigned. For security purposes, it is advised to set '*' to false
-     * (or remove it), and explicitly make individual fields accessible as needed.
-     *
-     * @var array
-     */
+    protected function _getTitle($title) {
+        return ucwords($title);
+    }
+
     protected $_accessible = [
-        '*' => true,
+        '*'  => true,
         'id' => false,
     ];
+
 }

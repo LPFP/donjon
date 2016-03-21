@@ -10,18 +10,6 @@
         <section class="container clearfix">
             <div id="body">
                 <div class="container-fluid">
-                    <div class=" row">
-                        <div class="col-lg-12">
-                            <h1>
-                                <?php
-                                echo $this->fetch('pageTitle');
-                                ?>
-                            </h1>
-                            <hr/>
-                        </div>
-                    </div>
-                    <?php
-                    ?>
                     <?php echo $this->Flash->render() ?>
                     <?php echo $this->fetch('content') ?>
                 </div>

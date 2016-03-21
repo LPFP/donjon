@@ -17,6 +17,9 @@ class CalendarsController extends AppController {
      * @return \Cake\Network\Response|null
      */
     public function index() {
+        if (!$this->request->session()->check('calendars.displayed')) {
+            $this->request->session()->write('calendars.displayed', []);
+        }
         $calendars = $this->Calendars->find('all')->order('name');
         $this->set([
             'calendars' => $calendars
