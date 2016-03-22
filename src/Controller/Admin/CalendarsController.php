@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
+use Cake\Network\Exception\NotFoundException;
 
 /**
  * Calendars Controller
@@ -44,26 +45,6 @@ class CalendarsController extends AppController {
     }
 
     /**
-     * Add method
-     *
-     * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
-     */
-    public function add() {
-        $calendar = $this->Calendars->newEntity();
-        if ($this->request->is('post')) {
-            $calendar = $this->Calendars->patchEntity($calendar, $this->request->data);
-            if ($this->Calendars->save($calendar)) {
-                $this->Flash->success(__('The calendar has been saved.'));
-                return $this->redirect(['action' => 'index']);
-            } else {
-                $this->Flash->error(__('The calendar could not be saved. Please, try again.'));
-            }
-        }
-        $this->set(compact('calendar'));
-        $this->set('_serialize', ['calendar']);
-    }
-
-    /**
      * Edit method
      *
      * @param string|null $id Calendar id.
@@ -71,20 +52,39 @@ class CalendarsController extends AppController {
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null) {
-        $calendar = $this->Calendars->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $calendar = $this->Calendars->patchEntity($calendar, $this->request->data);
-            if ($this->Calendars->save($calendar)) {
-                $this->Flash->success(__('The calendar has been saved.'));
-                return $this->redirect(['action' => 'index']);
-            } else {
-                $this->Flash->error(__('The calendar could not be saved. Please, try again.'));
+        $isEdit = ( $id === null);
+        $posted = $this->request->is(['patch', 'post', 'put']);
+
+        if ($isEdit) {
+            $calendar = $this->Calendars->get($id);
+            if (!$calendar) {
+                throw new NotFoundException(__("Unable to find calendar object with id %s", $id));
             }
         }
-        $this->set(compact('calendar'));
-        $this->set('_serialize', ['calendar']);
+        $this->set([
+            'calendar'   => $calendar,
+            '_serialize' => ['calendar']
+        ]);
+        if (!$posted) {
+
+            return;
+        }
+        $calendar = $this->Calendars->patchEntity($calendar, $this->request->data);
+
+        if (!$this->Calendars->save($calendar)) {
+            $this->set([
+                'calendar'   => $calendar,
+                '_serialize' => ['calendar']
+            ]);
+            $this->Flash->error(__('The calendar could not be saved. Please, try again.'));
+            return;
+        }
+        $this->set([
+            'calendar'   => $calendar,
+            '_serialize' => ['calendar']
+        ]);
+        $this->Flash->success(__('The calendar has been saved.'));
+        return $this->redirect(['action' => 'index']);
     }
 
     /**
