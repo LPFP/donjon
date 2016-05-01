@@ -16,7 +16,7 @@
     Bootstrap 3.3.5 core css  : Load bootstrap from cdn for the moment
     <link href="./css/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
 -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/flatly/bootstrap.css" rel="stylesheet">
+<link href="/css/bootswatch-flatly.css" rel="stylesheet">
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
