@@ -13,7 +13,8 @@
         "friendsofcake/crud": "~4.2",
         "josegonzalez/cakephp-upload": "^3.2",
         "cakephp/acl": "^0.1.0",
-        "davidyell/proffer": "~0.6"
+        "davidyell/proffer": "~0.6",
+        "akkaweb/cakephp-ckeditor": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",

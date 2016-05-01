@@ -226,7 +226,8 @@ Plugin::load('Acl', ['bootstrap' => true]);
 # Assets
 Plugin::load('Josegonzalez/Upload');
 Plugin::load('Proffer');
-
+# Ckeditor wysiwyg
+Plugin::load('AkkaCKEditor', ['bootstrap' => false, 'routes' => true]);
 
 # Events
 Cake\Event\EventManager::instance()->on(new \App\Event\ProfferUploadFilenameListener());

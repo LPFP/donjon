@@ -12,6 +12,8 @@
     <?= $this->fetch('title') ?>
 </title>
 
+<?php echo $this->CKEditor->loadJs(); ?>
+
 <!-- 
     Bootstrap 3.3.5 core css  : Load bootstrap from cdn for the moment
     <link href="./css/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 

@@ -31,6 +31,16 @@ class AppController extends Controller {
 
     use \Crud\Controller\ControllerTrait;
 
+    public $helpers = [
+        'AkkaCKEditor.CKEditor' => [
+            'version' => '4.4.7',
+            'distribution' => 'full-all',
+            'config.customConfig' => '',
+            'config.contentsCss' => '',
+            'config.stylesSet' => '',
+            'config.templates_files' => ''
+        ]
+    ];
     public $components = [
         'Crud.Crud' => [
             'actions' => [
@@ -66,7 +76,7 @@ class AppController extends Controller {
      */
     public function beforeRender(Event $event) {
         if (!array_key_exists('_serialize', $this->viewVars) &&
-        in_array($this->response->type(), ['application/json', 'application/xml'])
+                in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
             $this->set('_serialize', true);
         }
