@@ -11,13 +11,15 @@ $this->loadHelper('Form', [
     <div class="col-lg-12">
         <h3><?php echo __("Event"); ?></h3>
         <hr>
+
         <nav class="well well-small" id="">
             <?php
             echo $this->Html->link(__('Reload'), $this->Url->build(), ['class' => 'btn btn-sm btn-default']);
-            echo $this->Html->link(__('close'), [], ['class' => 'btn btn-sm btn-danger']);
-            echo $this->Form->postLink(
-            __('Delete'), ['action' => 'delete', $event->id], ['class' => 'pull-right btn btn-sm btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $event->id)]
-            );
+            echo $this->Html->link(__('close'), ['#' => '   '], ['class' => 'btn btn-sm btn-danger closeFancybox']);
+            echo $this->Form->postLink(__('Delete'), ['action' => 'delete', $event->id], [
+                'class' => 'pull-right btn btn-sm btn-danger'], [
+                'confirm' => __('Are you sure you want to delete # {0}?', $event->id)
+            ]);
             ?>
             <div class="clearfix"></div>
         </nav>

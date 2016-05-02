@@ -6,8 +6,8 @@ use App\Model\Entity\Calendar;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
-use Cake\Validation\Validator;
 use Cake\Database\Schema\Table as Schema;
+use Cake\Validation\Validator;
 
 /**
  * Calendars Model
@@ -48,6 +48,13 @@ class CalendarsTable extends Table {
      * @return \Cake\Validation\Validator
      */
     public function validationDefault(Validator $validator) {
+        $validator->provider('ColorValidator', 'App\Validator\ColorValidator');
+        #
+        $validator->add('parameters.color', 'cssValidColorRule', [
+            'rule'     => 'isColor',
+            'provider' => 'ColorValidator'
+        ]);
+
         $validator
         ->integer('id')
         ->allowEmpty('id', 'create');

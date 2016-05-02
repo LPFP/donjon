@@ -33,29 +33,36 @@ $this->Html->script([
                     foreach ($calendars as $calendar):
                         ?>
                         <li 
+                            style="<?php echo "background-color:{$calendar->parameters['backgroundColor']}" ?>"
                             class="list-group-item calendar" 
                             data-id="<?php echo $calendar->id; ?>" 
                             style="background:<?php echo $calendar->color; ?>"
                             >
+                            <span>
                                 <?php echo $calendar->name; ?>
-                            <aside class="pull-right">
-                                <?php
-                                $class    = 'btn btn-default btn-xs toggleCalendarAction ';
-                                $disabled = (!in_array($calendar->id, $displayed));
-                                $class.= ($disabled) ? '' : 'displayed';
-                                echo $this->Html->link('<i class="fa fa-eye"></i> ', ['#' => ''], [
-                                    'id'       => '',
-                                    'class'    => $class,
-                                    'disabled' => $disabled,
-                                    'data-id'  => $calendar->id,
-                                    'escape'   => false
-                                ]);
-                                ?>
+                            </span>
+                            <aside class="pull-right"
+                                   >
+                                       <?php
+                                       $class    = 'btn btn-default btn-xs toggleCalendarAction ';
+                                       $disabled = (!in_array($calendar->id, $displayed));
+                                       $class.= ($disabled) ? '' : 'displayed';
+                                       echo $this->Html->link('<i class="fa fa-eye"></i> ', ['#' => ''], [
+                                           'id'       => '',
+                                           'class'    => $class,
+                                           'disabled' => $disabled,
+                                           'data-id'  => $calendar->id,
+                                           'escape'   => false,
+                                       ]);
+                                       ?>
                                 <div class="btn-group ">
 
                                     <?php
                                     echo $this->Html->link('<i class="fa fa-pencil"></i> ', ['action' => 'edit', $calendar->id], ['class' => 'btn btn-default btn-xs', 'escape' => false]);
-                                    echo $this->Form->postLink('<i class="fa fa-times"></i> ', ['action' => 'delete'], [
+                                    echo $this->Form->postLink('<i class="fa fa-times"></i> ', [
+                                        'action' => 'delete',
+                                        $calendar->id,
+                                    ], [
                                         'class'   => 'btn btn-default btn-xs',
                                         'escape'  => false,
                                         'confirm' => __('Are you sure you want to delete the calendar "{0}" ?', $calendar->name)
@@ -72,6 +79,13 @@ $this->Html->script([
         </div>
     </div>
 </div>
+<style>
+    ul.list-group li span{
+        background:rgba(255, 255, 255, 0.6) none repeat scroll 0 0;
+        padding:3px 7px;
+        border-radius:10px; 
+    }
+</style>
 <script>
     $(document).ready(function() {
         if ($('#calendar').hasClass('.fc')) {
@@ -109,13 +123,16 @@ $this->Html->script([
                     };
                 },
                 success: function(data) {
+                    $.each(data.events, function(key, item) {
+                        item.backgroundColor = item.parameters.backgroundColor;
+                        item.borderColor = item.parameters.borderColor;
+                        item.textColor = item.parameters.textColor;
+                        item.color = item.parameters.color;
+                    });
                     return data.events;
                 }
             },
             dayClick: function(date, jsEvent, view) {
-                console.log('Clicked on: ' + date.format());
-                console.log('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-                console.log('Current view: ' + view.name);
                 $.fancybox.open({
                     type: 'iframe',
                     width: "90%",
@@ -132,7 +149,7 @@ $this->Html->script([
                 addCalendar: {
                     text: '<?php echo __('Add Calendar') ?>',
                     click: function() {
-                        window.location = '<?php echo $this->Url->build([ 'controller' => 'calendars', 'action' => 'add']) ?>';
+                        window.location = '<?php echo $this->Url->build([ 'controller' => 'calendars', 'action' => 'edit']) ?>';
                     }
                 }
             },

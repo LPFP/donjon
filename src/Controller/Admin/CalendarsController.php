@@ -4,6 +4,9 @@ namespace App\Controller\Admin;
 
 use App\Controller\AppController;
 use Cake\Network\Exception\NotFoundException;
+use App\Model\Entity\Calendar;
+use App\Form\FullCalendarParametersForm;
+use App\Validation\ColorValidation;
 
 /**
  * Calendars Controller
@@ -44,6 +47,15 @@ class CalendarsController extends AppController {
         $this->set('_serialize', ['calendar']);
     }
 
+    public function parseParameters() {
+        foreach ($this->request->data as $k => $v) {
+            if (strstr($k, "parameters") !== false) {
+                $this->request->data['params'][lcfirst(str_replace('parameters', '', $k))] = $v;
+                unset($this->request->data[$k]);
+            }
+        }
+    }
+
     /**
      * Edit method
      *
@@ -52,8 +64,10 @@ class CalendarsController extends AppController {
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null) {
-        $isEdit = ( $id === null);
-        $posted = $this->request->is(['patch', 'post', 'put']);
+        $isEdit     = !( $id === null);
+        $posted     = $this->request->is(['patch', 'post', 'put']);
+        $calendar   = new Calendar();
+        $parameters = new FullCalendarParametersForm();
 
         if ($isEdit) {
             $calendar = $this->Calendars->get($id);
@@ -62,25 +76,32 @@ class CalendarsController extends AppController {
             }
         }
         $this->set([
+            'parameters' => $parameters,
             'calendar'   => $calendar,
+            'isEdit'     => $isEdit,
             '_serialize' => ['calendar']
         ]);
         if (!$posted) {
-
             return;
         }
+        $this->parseParameters();
+
         $calendar = $this->Calendars->patchEntity($calendar, $this->request->data);
 
-        if (!$this->Calendars->save($calendar)) {
+        if (!$this->Calendars->save($calendar) && $parameters->execute($this->request->data)) {
             $this->set([
+                'parameters' => $parameters,
                 'calendar'   => $calendar,
+                'isEdit'     => $isEdit,
                 '_serialize' => ['calendar']
             ]);
             $this->Flash->error(__('The calendar could not be saved. Please, try again.'));
             return;
         }
         $this->set([
+            'parameters' => $parameters,
             'calendar'   => $calendar,
+            'isEdit'     => $isEdit,
             '_serialize' => ['calendar']
         ]);
         $this->Flash->success(__('The calendar has been saved.'));

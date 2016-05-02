@@ -10,15 +10,9 @@ $this->loadHelper('Form', [
     <div class="col-lg-12">
         <h3><?php echo __("Calendar"); ?></h3>
         <hr>
-        <div class="well well-small">
-            <?= $this->Html->link(__('Reload'), [], ['class' => 'btn btn-sm btn-default']) ?>
-            <?= $this->Html->link(__('close'), [], ['class' => 'btn btn-sm btn-danger']) ?>
-        </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="span12">
+    <div class="col-lg-12">
         <div class="calendars">
             <?php echo $this->Form->create($calendar, ['form-horizontal']) ?>
             <fieldset>
@@ -29,13 +23,15 @@ $this->loadHelper('Form', [
                 echo $this->Form->label(__("Public"));
                 echo $this->Form->input('is_public', array_merge($opt, ['placeholder' => __("")]));
                 #
-                echo $this->Form->label(__("Colors"));
-                echo $this->Form->input('parameters.borderColor', array_merge($opt, ['placeholder' => __("Hexadecimal code for border color")]));
-                echo $this->Form->input('parameters.backgroundColor', array_merge($opt, ['placeholder' => __("Hexadecimal code for background color")]));
-                echo $this->Form->input('parameters.textColor', array_merge($opt, ['placeholder' => __("Hexadecimal code for text color")]));
+                echo $this->Form->label(__("Events colors border"));
+                echo $this->Form->input('parametersBorderColor', array_merge($opt, ['placeholder' => __("Hexadecimal code for border color")]));
+                echo $this->Form->label(__("Events background color"));
+                echo $this->Form->input('parametersBackgroundColor', array_merge($opt, ['placeholder' => __("Hexadecimal code for background color")]));
+                echo $this->Form->label(__("Events text color"));
+                echo $this->Form->input('parametersTextColor', array_merge($opt, ['placeholder' => __("Hexadecimal code for text color")]));
                 #
                 echo $this->Form->label(__("Editable"));
-                echo $this->Form->checkbox('parameters.editable', array_merge($opt, ['placeholder' => __("Editable")]));
+                echo $this->Form->checkbox('is_editable', array_merge($opt, ['placeholder' => __("Editable")]));
                 ?>
             </fieldset>
             <br/>
@@ -47,4 +43,3 @@ $this->loadHelper('Form', [
         </div>
     </div>
 </div>
-·

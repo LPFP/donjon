@@ -15,10 +15,6 @@ use Cake\ORM\Entity;
  */
 class Calendar extends Entity {
 
-    protected function _getTitle($title) {
-        return ucwords($title);
-    }
-
     protected $_accessible = [
         '*'  => true,
         'id' => false,

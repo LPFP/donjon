@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
+use App\Lib\FullCalendarConfigurator;
 
 /**
  * Events Controller
@@ -23,29 +24,41 @@ class EventsController extends AppController {
     public function getCalendarsEvents() {
         $calendars = $this->request->query('calendars');
         $events    = [];
-
         if ($calendars === null) {
             $calendars = [];
         }
+
         if (!empty($calendars)) {
             $events = $this->Events
             ->find('all')
             ->where('1=1')
             ->andWhere(['calendar_id IN' => $calendars])
             ->andWhere(['start BETWEEN :start AND :end'])
+            ->contain(['Calendars'])
             ->bind(':start', new \DateTime($this->request->query('start') . ' 00:00:00'), 'date')
             ->bind(':end', new \DateTime($this->request->query('end') . ' 23:59:59'), 'date')
+            ->toArray();
             ;
         }
+        $params = [];
+        foreach ($events as $k => $event) :
+            $params = array_merge($event->calendar->get('parameters'), $event->get('parameters'));
+            $event->set('parameters', $params);
+
+            unset($event->calendar);
+            $events[$k] = $event;
+        endforeach;
+        #
 
         $this->set([
             'events' => $events
         ]);
+        $this->set('_serialize', ['events']);
 
+        #
         $this->request->session()->write('calendars.displayed', array_unique($calendars));
         $this->RequestHandler->renderAs($this, 'json');
         $this->response->type('application/json');
-        $this->set('_serialize', ['events']);
     }
 
     /**
@@ -81,32 +94,8 @@ class EventsController extends AppController {
     }
 
     /**
-     * Add method
-     *
-     * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
-     */
-    public function add() {
-        $this->viewBuilder()->layout("empty");
-        $event = $this->Events->newEntity();
-
-        if (!$this->request->is('post')) {
-            return;
-        }
-        $event = $this->Events->patchEntity($event, $this->request->data);
-        if ($this->Events->save($event)) {
-            $this->Flash->success(__('The event has been saved.'));
-            return $this->redirect(['action' => 'index']);
-        } else {
-            $this->Flash->error(__('The event could not be saved. Please, try again.'));
-        }
-        $calendars = $this->Events->Calendars->find('list', ['limit' => 200]);
-        $this->set(compact('event', 'calendars'));
-        $this->set('_serialize', ['event']);
-    }
-
-    /**
      * Edit method
-     *
+     * 
      * @param string|null $id Event id.
      * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.

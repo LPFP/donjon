@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
@@ -16,8 +17,9 @@ use Cake\ORM\Entity;
  * @property int $calendar_id
  * @property \App\Model\Entity\Calendar $calendar
  */
-class Event extends Entity
-{
+class Event extends Entity {
+
+    var $parameters;
 
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -29,7 +31,8 @@ class Event extends Entity
      * @var array
      */
     protected $_accessible = [
-        '*' => true,
+        '*'  => true,
         'id' => false,
     ];
+
 }

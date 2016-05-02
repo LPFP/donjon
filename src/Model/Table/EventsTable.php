@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use App\Model\Entity\Event;
@@ -6,14 +7,19 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Database\Schema\Table as Schema;
 
 /**
  * Events Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Calendars
  */
-class EventsTable extends Table
-{
+class EventsTable extends Table {
+
+    protected function _initializeSchema(Schema $schema) {
+        $schema->columnType('parameters', 'json');
+        return $schema;
+    }
 
     /**
      * Initialize method
@@ -21,8 +27,7 @@ class EventsTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
-    {
+    public function initialize(array $config) {
         parent::initialize($config);
 
         $this->table('events');
@@ -33,7 +38,7 @@ class EventsTable extends Table
 
         $this->belongsTo('Calendars', [
             'foreignKey' => 'calendar_id',
-            'joinType' => 'INNER'
+            'joinType'   => 'INNER'
         ]);
     }
 
@@ -43,29 +48,28 @@ class EventsTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
-    {
+    public function validationDefault(Validator $validator) {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
+        ->integer('id')
+        ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
+        ->requirePresence('title', 'create')
+        ->notEmpty('title');
 
         $validator
-            ->requirePresence('content', 'create')
-            ->notEmpty('content');
+        ->requirePresence('content', 'create')
+        ->notEmpty('content');
 
         $validator
-            ->dateTime('begin')
-            ->requirePresence('begin', 'create')
-            ->notEmpty('begin');
+        ->dateTime('begin')
+        ->requirePresence('begin', 'create')
+        ->notEmpty('begin');
 
         $validator
-            ->dateTime('end')
-            ->requirePresence('end', 'create')
-            ->notEmpty('end');
+        ->dateTime('end')
+        ->requirePresence('end', 'create')
+        ->notEmpty('end');
 
         return $validator;
     }
@@ -77,9 +81,9 @@ class EventsTable extends Table
      * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
      * @return \Cake\ORM\RulesChecker
      */
-    public function buildRules(RulesChecker $rules)
-    {
+    public function buildRules(RulesChecker $rules) {
         $rules->add($rules->existsIn(['calendar_id'], 'Calendars'));
         return $rules;
     }
+
 }

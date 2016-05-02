@@ -10,6 +10,10 @@ use PDO;
 
 class JsonType extends Type {
 
+    public function getBaseType() {
+        return 'text';
+    }
+
     public function toPHP($value, Driver $driver) {
         if ($value === null) {
             return null;
