@@ -56,7 +56,6 @@
                     <td><?= $this->Number->format($user->id) ?></td>
                     <td><?php echo $this->Html->image("/files/profiles/avatar/{$profile->get('avatar_dir')}/littleSquare_{$profile->get('avatar')}"); ?></td>
                     <td><?= h($user->email) ?></td>
-                    <td><?= h($user->password) ?></td>
                     <td><?= $user->has('profile') ? $this->Html->link($user->profile->name, ['controller' => 'Profiles', 'action' => 'view', $user->profile->id]) : '' ?></td>
                     <td><?= h($user->created) ?></td>
                     <td><?= h($user->modified) ?></td>
