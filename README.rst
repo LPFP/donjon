@@ -25,3 +25,5 @@ For hard pressed developpers ::
 Links
 -----
 http://lepetitfablabdeparis.fr/
+
+If anything, please give us a shout with twitter or facebook
