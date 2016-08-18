@@ -26,4 +26,4 @@ Links
 -----
 http://lepetitfablabdeparis.fr/
 
-If anything, please give us a shout with twitter or facebook
+If anything, please give us a shout with twitter or facebook or else
